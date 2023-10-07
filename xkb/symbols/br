@@ -102,21 +102,19 @@ xkb_symbols "olpc" {
 };
 
 
-//
 // Brazilian Dvorak layout                                 2005-04-18
-// "Teclado Simplificado Brasileiro" ou "Dvorak Brasileiro"
-//
-// Heitor Moraes    heitor.moraes@gmail.com
-// Luiz Portella    lfpor@lujz.org
-// Nando Florestan  nando2003@mandic.com.br
-// Ari Caldeira     ari@tecladobrasileiro.com.br
-//
-partial alphanumeric_keys
-xkb_symbols "dvorak" {
-
+    // "Teclado Simplificado Brasileiro" ou "Dvorak Brasileiro"
+    //
+    // Heitor Moraes    heitor.moraes@gmail.com
+    // Luiz Portella    lfpor@lujz.org
+    // Nando Florestan  nandoflorestan+dvorak@gmail.com
+    // Ari Caldeira     ari@tecladobrasileiro.com.br
+    //
+    partial alphanumeric_keys
+    xkb_symbols "dvorak" {
     name[Group1]="Portuguese (Brazil, Dvorak)";
 
-// Numeric row
+    // Numeric row
     key <TLDE> { [   apostrophe,        quotedbl,           dead_caron, dead_doubleacute ] };
     key <AE01> { [            1,          exclam,          onesuperior,       exclamdown ] };
     key <AE02> { [            2,              at,          twosuperior,          onehalf ] };
@@ -131,8 +129,7 @@ xkb_symbols "dvorak" {
     key <AE11> { [  bracketleft,       braceleft,          ordfeminine,       0x01000326 ] };
     key <AE12> { [ bracketright,      braceright,            masculine,   dead_abovering ] };
 
-
-// Upper row
+    // Upper row
     key <AD01> { [        slash,        question,               degree,     questiondown ] };
     key <AD02> { [        comma,            less,           0x01000329,       0x01000313 ] };
     key <AD03> { [       period,         greater,           0x01002022,   periodcentered ] };
@@ -146,7 +143,7 @@ xkb_symbols "dvorak" {
     key <AD11> { [   dead_acute,      dead_grave,                acute,            grave ] };
     key <AD12> { [        equal,            plus,              section,        plusminus ] };
 
-// Central row
+    // Central row
     key <AC01> { [            a,               A,                   ae,               AE ] };
     key <AC02> { [            o,               O,                   oe,               OE ] };
     key <AC03> { [            e,               E,             EuroSign,         EuroSign ] };
@@ -160,7 +157,7 @@ xkb_symbols "dvorak" {
     key <AC11> { [   dead_tilde, dead_circumflex,           asciitilde,      asciicircum ] };
     key <BKSL> { [        minus,      underscore,           0x01002015,       0x01000336 ] };
 
-// Lower row
+    // Lower row
     key <LSGT> { [     ccedilla,        Ccedilla,            backslash,              bar ] };
     key <AB01> { [    semicolon,           colon,           0x01000331,       0x0100032D ] };
     key <AB02> { [            q,               Q,           0x01000259,       0x0100018F ] };
@@ -176,15 +173,56 @@ xkb_symbols "dvorak" {
 
     key <SPCE> { [        space,           space,         nobreakspace,     nobreakspace ] };
 
-// Configures the "," for the numeric keypad
+    // Configures the "," for the numeric keypad
     include "kpdl(comma)"
 
-// Configures the use of the AltGr key
+    // Configures the use of the AltGr key
     include "level3(ralt_switch)"
 };
 
 
-//
+// plenopets: Brazilian Dvorak multilingual
+    // Supports Portuguese, Polish, Esperanto, Spanish and English.
+    // 2023-10-06 - Nando Florestan  nandoflorestan+dvorak@gmail.com
+    partial alphanumeric_keys
+    xkb_symbols "plenopets" {
+    include "br(dvorak)"
+    name[Group1]="Portuguese (Dvorak multilingual)";
+
+    //key <AD08> { [ c, C, uparrow, copyright ] };
+    key <AD08> { [ c, C, ccedilla, Ccedilla ] };
+
+    // Extra ABNT2 key:
+    //key <AB11> { [ backslash, bar, currency, brokenbar ] };
+    key <AB11> { [ uparrow, copyright, currency, brokenbar ] };
+
+    //key <AD01> { [ slash, question, degree, questiondown ] };
+    key <AD01> { [ slash, question, backslash, questiondown ] };
+    //key <AD02> { [ comma, less, 0x01000329, 0x01000313 ] };
+    key <AD02> { [ comma, less, bar, degree ] };
+
+    //key <AD12> { [ equal, plus, section, plusminus ] };
+    key <AD12> { [ equal, plus, 0x01002014, plusminus ] }; // em dash: —
+    // key <BKSL> { [ minus, underscore, 0x01002015, 0x01000336 ] };
+    key <BKSL> { [ minus, underscore, 0x01002013, section ] }; // en dash: –
+
+    //Prolly change:
+    // key <AE05> { [            5,         percent,                 cent,       0x01002030 ] };
+    // key <AE06> { [            6,  dead_diaeresis,              notsign,        diaeresis ] };
+    // key <AE07> { [            7,       ampersand,        dead_belowdot,    dead_abovedot ] };
+    // key <AE08> { [            8,        asterisk,          dead_ogonek,        dead_horn ] };
+    // key <AE09> { [            9,       parenleft,         dead_cedilla,        dead_hook ] };
+    // key <AE10> { [            0,      parenright,          dead_macron,       dead_breve ] };
+    // key <AE11> { [  bracketleft,       braceleft,          ordfeminine,       0x01000326 ] };
+    // key <AE12> { [ bracketright,      braceright,            masculine,   dead_abovering ] };
+
+    // REMOVED: 0x01000329
+    // REMOVED: 0x01000313
+    // REMOVED: ̶ = 0x01000336
+    // REMOVED: ― = 0x01002015 (longer than em dash!)
+};
+
+
 // Brazilian Nativo layout.
 //     This is a Dvorak-based layout, designed for the Portuguese language.
 //
