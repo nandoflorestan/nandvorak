@@ -1,23 +1,25 @@
-# plenopets – driver para teclado Dvorak em língua portuguesa
+# Nandvorak – driver para teclado Dvorak em língua portuguesa
 
-Este projeto contém o layout de teclado Dvorak "plenopets", que foca na língua portuguesa mas também suporta espanhol, francês, alemão e Esperanto.
+Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak, foca na língua portuguesa mas também suporta espanhol, francês, alemão e Esperanto.
 
-As prioridades do plenopets são:
+As prioridades do Nandvorak são:
 
 - Layout Dvorak.
 - Teclas mortas para acentuação como no ABNT2...
-- ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos \|çÇ
+- ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos çÇ\|
 - Suporte ao português, evidentemente.
 - Suporte ao alfabeto polonês: ąĄ ęĘ ćĆ łŁ ńŃ óÓ śŚ źŹ żŻ
 - Suporte ao Esperanto: ĉĈ ĝĜ ĥĤ ĵĴ ŝŜ ŭŬ
 - Suporte ao espanhol: ñÑ
 - Suporte ao francês: àÀ, Ââ, æÆ, çÇ, éÉ, èÈ, êÊ, ëË
 - Suporte ao alemão: äÄ öÖ üÜ ßẞ
+- Rica escolha de glifos extra.
+- Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
 
 TODO
-- uparrow
-- cedilha com dead keys mais fácil, sem perder o ć. Hoje o dead cedilla é AltGr+9. Seria ótimo se fosse ~c
-- Adir o plenopets à lista (GUI).
+- Navegação
+- Til+c = ccedilha
+- Adir o Nandvorak à lista (GUI).
 - Enviar ao projeto XKB.
 - Versão Wayland.
 - Versão para Windows 11.
@@ -29,17 +31,31 @@ TODO
 
 ## Como é esse leiaute?
 
-- Base Dvorak.
+- Baseado no Dvorak.
 - O cê cedilha (çÇ) é AltGr+c; acento agudo resulta em ćĆ – para o polonês.
+- O teclado numérico oferece setas e glifos matemáticos.
 - O ndash – que serve para separar cláusulas assim – está em AltGr+- e o mdash está em AltGr+=. Este é mais longo e pode ser usado como travessão na escrita de ficção: — Legal!
 
 
-.. image:: ./plenopets.png
+TODO
+.. image:: ./Nandvorak.png
 
+TODO ilustração do teclado numérico
 
 ### Teclas mortas
 
 TODO
+
+### Para não tirar as mãos do lugar
+
+- Shift direito dispara Escape, a menos que pressionado com AltGr.
+- TODO Caps Lock alterna para um segundo teclado.
+- AltGr + Shift_L disparam Caps Lock.
+- TODO Os dois Shifts pressionados juntos disparam Caps Lock.
+
+### O segundo teclado (via Caps Lock)
+
+TODO ilustração
 
 
 ## Status do projeto
@@ -71,7 +87,7 @@ Substitua-o pelo nosso arquivo "br":
 
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
-    setxkbmap br plenopets    # novo
+    setxkbmap br nandvorak    # novo
     setxkbmap br dvorak       # versão antiga
     setxkbmap br abnt2        # qwerty brasileiro
     setxkbmap epo             # qwerty esperanto

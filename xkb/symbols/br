@@ -181,79 +181,120 @@ xkb_symbols "olpc" {
 };
 
 
-// plenopets: Brazilian Dvorak multilingual
-    // Supports Portuguese, Polish, Esperanto, Spanish and English.
-    // 2023-10-08 - Nando Florestan  nandoflorestan+dvorak@gmail.com
-    partial alphanumeric_keys
-    xkb_symbols "plenopets" {
-    include "br(dvorak)"
-    name[Group1]="Portuguese (Dvorak multilingual)";
+// Nandvorak: Brazilian Dvorak multilingual
+// Supports Portuguese, Polish, Esperanto, Spanish and English.
+// 2023-10-08 - Nando Florestan  nandoflorestan+dvorak@gmail.com
+// TODO Δ ƒƑ
+// Feature envy: us/symbolic
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
+// │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¨ │ & ˙ │ * ̛│ ( ̉ │ ) ˘ │ { ̦ │ } ° ┃Backspace┃
+// │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ " │ + ' ┃ ⌫       ┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
+// ┃Tab    ┃ ? ¿ │ < ° │ > · │ R ₽ │ T τ │ Y ¥ │ U U │ I ’ │ O Ω │ P ₱ │ ` ¸ │ ] » ┃ ⏎     ┃
+// ┃ ↹     ┃ / \ │ , | │ . • │ r ® │ t ™ │ y ¥ │ u u │ i ‘ │ o œ │ p π │ ´ ˛ │ ) } ┃ Enter ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
+// ┃Caps    ┃ A Æ │ O Œ │ E € │ U Ŭ │ I İ │ D H │ J ” │ K „ │ L λ │ M M │ ^   │ & × ┃      ┃
+// ┃Lock  ⇬ ┃ a æ │ o œ │ e € │ u ŭ │ i ı │ d ð │ j “ │ k ‚ │ l £ │ m µ │ ~ ˙ │ * $ ┃      ┃
+// ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
+// ┃Shift ┃ > ≥ │ Z ¶ │ X ÷ │ C ¢ │ V V │ B ₿ │ N N │ ? ¿ │ , · │ ; ´ │ \ ¦ ┃Shift         ┃
+// ┃ ⇧    ┃ < ≤ │ z § │ x × │ c © │ v ♀ │ b ♂ │ n ⚥ │ ! ¡ │ . … │ : ` │ / | ┃ ⇧            ┃
+// ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
+// ┃Ctrl   ┃ Fn    ┃Alt    ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
+// ┃       ┃       ┃       ┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 
-    // Most important thing: altgr + c = ccedilla
-    //key <AD08> { [ c, C, uparrow, copyright ] };
-    key <AD08> { [ c, C, ccedilla, Ccedilla ] };
+partial alphanumeric_keys modifier_keys function_keys keypad_keys alternate_group
+    xkb_symbols "nandvorak" {
+    name[Group1]="Portuguese (Nandvorak)";
 
-    // Backslash on the same key as slash; pipe on the next key
-    //key <AD01> { [ slash, question, degree, questiondown ] };
-    key <AD01> { [ slash, question, backslash, questiondown ] };
-    //key <AD02> { [ comma, less, 0x01000329, 0x01000313 ] };
-    key <AD02> { [ comma, less, bar, degree ] };
+    // include "kpdl(comma)"  // numeric keypad outputs ","
+    include "keypad(ossmath)"
+    include "keypad(ossnumber)"
+    include "level3(ralt_switch)"  // Configure the use of the AltGr key
 
-    // en dash and em dash are 2 very important glyphs for writing text.
-    //key <AD12> { [ equal, plus, section, plusminus ] };
-    key <AD12> { [ equal, plus, 0x01002014, plusminus ] }; // em dash: —
-    // key <BKSL> { [ minus, underscore, 0x01002015, 0x01000336 ] };
-    key <BKSL> { [ minus, underscore, 0x01002013, section ] }; // en dash: –
+    // Numeric row
+    key <TLDE> {[ apostrophe,       quotedbl,           dead_caron, dead_doubleacute ]};
+    key <AE01> {[          1,         exclam,          onesuperior,       exclamdown ]};
+    key <AE02> {[          2,             at,          twosuperior,          onehalf ]};
+    key <AE03> {[          3,     numbersign,        threesuperior,    threequarters ]};
+    key <AE04> {[          4,         dollar,             sterling,       onequarter ]};
 
-    // acute is not needed, just press dead_acute twice. Likewise for grave.
-    // Put dead_ogonek in the same key because it's a cedilla that turns right.
-    // dead_ogonek is more accessible here. It's used in Polish: ąĄȩĘ
-    // key <AD11> { [ dead_acute, dead_grave, acute, grave ] };
-    key <AD11> { [ dead_acute, dead_grave, dead_ogonek, dead_cedilla ] };
+    // TODO Prolly change:
+    key <AE05> {[          5,        percent,                 cent,       0x01002030 ]};
+    key <AE06> {[          6, dead_diaeresis,              notsign,         NoSymbol ]};
+    key <AE07> {[          7,      ampersand,        dead_belowdot,    dead_abovedot ]};
+    key <AE08> {[          8,       asterisk,            dead_horn,         NoSymbol ]};
+    key <AE09> {[          9,      parenleft,            dead_hook,         NoSymbol ]};
+    key <AE10> {[          0,     parenright,          dead_macron,       dead_breve ]};
+    key <AE11> {[  bracketleft,    braceleft,          ordfeminine,       0x01000326 ]};
+    key <AE12> {[ bracketright,   braceright,            masculine,   dead_abovering ]};
 
-    // Again, press the dead key twice to obtain the undead glyph.
-    // key <AC11> { [ dead_tilde, dead_circumflex, asciitilde, asciicircum ] };
-    key <AC11> { [ dead_tilde, dead_circumflex, dead_abovedot ] };
+    // Upper row
+    // Backslash on the same key as slash; pipe (bar) on the next key:
+    key <AD01> {[      slash,       question,            backslash,     questiondown ]};
+    key <AD02> {[      comma,           less,                  bar,           degree ]};
+    key <AD03> {[     period,        greater,           0x01002022,   periodcentered ]};
+    key <AD04> {[          p,              P,                thorn,            THORN ]};
+    key <AD05> {[          y,              Y,                  yen,              yen ]};
+    key <AD06> {[          f,          F,  leftdoublequotemark,  leftsinglequotemark ]};
+    key <AD07> {[          g,          G, rightdoublequotemark, rightsinglequotemark ]};
+    // Most important: AltGr+c = ccedilla (no need for ABNT2 hardware)
+    key <AD08> {[          c,              C,             ccedilla,         Ccedilla ]};
+    key <AD09> {[          r,              R,           registered,       registered ]};
+    key <AD10> {[          l,              L,              lstroke,          Lstroke ]};
+    key <AD11> {[ dead_acute,     dead_grave,                acute,            grave ]};
+    // dead_ogonek is used in Polish: ąĄȩĘ. It's a cedilla that turns right.
+    key <AD11> {[ dead_acute,     dead_grave,          dead_ogonek,     dead_cedilla ]};
+    key <AD12> {[      equal,           plus,    0x01002014, plusminus ]}; // em dash: —
+
+    // Main row
+    key <AC01> {[          a,              A,                   ae,               AE ]};
+    key <AC02> {[          o,              O,                   oe,               OE ]};
+    key <AC03> {[          e,              E,             EuroSign,         EuroSign ]};
+    key <AC04> {[          u,              U,            ubreve, Ubreve ]}; // Esperanto
+    key <AC05> {[          i,              I,             idotless,        Iabovedot ]};
+    key <AC06> {[          d,              D,                delta,            DELTA ]};
+    key <AC07> {[          h,              H,            leftarrow,        paragraph ]};
+    key <AC08> {[          t,              T,               Return,        trademark ]};
+    key <AC09> {[          n,              N,                  eng,              ENG ]};
+    key <AC10> {[          s,              S,               ssharp,            U1E9E ]};
+    key <AC11> {[ dead_tilde, dead_circumflex,       dead_abovedot,         NoSymbol ]};
     // ż (z dot above) is used in Polish.
+    key <BKSL> {[      minus,     underscore,      0x01002013, section ]}; // en dash: –
 
-    // Put ubreve on the u key so it's easy to remember.
-    // key <AC04> { [ u, U, oslash, Ooblique ] };
-    key <AC04> { [ u, U, ubreve, Ubreve ] }; // ŭŬ are Esperanto glyphs.
+    // Lower row. The ccedilla key is only available in ABNT2 keyboards:
+    key <LSGT> {[   ccedilla,       Ccedilla,            backslash,              bar ]};
+    key <AB01> {[  semicolon,          colon,           0x01000331,       0x0100032D ]};
+    // ;:a̱a̱ḇc̱ḏḙa̭b
+    key <AB02> {[          q,              Q,           0x01000259,       0x0100018F ]};
+    key <AB03> {[          j,              J,           0x01000292,       0x010001B7 ]};
+    key <AB04> {[          k,              K,        guillemotleft,       0x01002039 ]};
+    key <AB05> {[          x,              X,             multiply,         division ]};
+    key <AB06> {[          b,              B,       guillemotright,       0x0100203A ]};
+    key <AB07> {[          m,              M,            downarrow,               mu ]};
+    key <AB08> {[          w,              W,             NoSymbol,         NoSymbol ]};
+    key <AB09> {[          v,              V, doublelowquotemark, singlelowquotemark ]};
+    key <AB10> {[          z,              Z,           0x0100201F,       0x0100201B ]};
+    // This key is not available in US or PL keyboards:
+    key <AB11> {[  backslash,            bar,            brokenbar,         NoSymbol ]};
+    //       https://en.wikipedia.org/wiki/Vertical_bar#Solid_vertical_bar_vs_broken_bar
 
-    // ...and then ubreve is not needed where it was before.
-    // key <AB08> { [ w, W, ubreve, Ubreve ] };
-    key <AB08> { [ w, W ] };
+    key <LFSH> {[    Shift_L,        Shift_L,            Caps_Lock,        Caps_Lock ]};
+    key <RTSH> {[     Escape,        Shift_R,              Shift_R,          Shift_R ]};
 
-    // One of the 2 extra ABNT2 keys:
-    //key <AB11> { [ backslash, bar, currency, brokenbar ] };
-    key <AB11> { [ backslash, bar ] };
+    key <SPCE> {[      space,          space,         nobreakspace,     nobreakspace ]};
 
-    //Prolly change:
-    // key <AE05> { [            5,         percent,                 cent,       0x01002030 ] };
-    // key <AE06> { [            6,  dead_diaeresis,              notsign,        diaeresis ] };
-    // key <AE07> { [            7,       ampersand,        dead_belowdot,    dead_abovedot ] };
-
-    // key <AE08> { [ 8, asterisk, dead_ogonek, dead_horn ] };
-    key <AE08> { [ 8, asterisk, dead_horn ] };
-    // key <AE09> { [ 9, parenleft, dead_cedilla, dead_hook ] };
-    key <AE09> { [ 9, parenleft, dead_hook ] };
-
-    // key <AE10> { [            0,      parenright,          dead_macron,       dead_breve ] };
-    // key <AE11> { [  bracketleft,       braceleft,          ordfeminine,       0x01000326 ] };
-    // key <AE12> { [ bracketright,      braceright,            masculine,   dead_abovering ] };
 
     // REMOVED: ¤ = "currency". Not a popular glyph.
     //      https://en.wikipedia.org/wiki/Currency_sign_(typography)
-    // REMOVED: ¦ = brokenbar.
-    //      https://en.wikipedia.org/wiki/Vertical_bar#Solid_vertical_bar_vs_broken_bar
     // REMOVED: 0x01000329  // dead: Combining Vertical Line Below
     // REMOVED: 0x01000313  // dead: Combining Comma Above
     // REMOVED: ̶ = 0x01000336  // dead: Combining Long Stroke Overlay
     // REMOVED: ― = 0x01002015 (longer than em dash!)
     // REMOVED: ø = oslash: Latin Small Letter O With Stroke
     // REMOVED: Ø = Ooblique: Latin Capital Letter O With Stroke
-    // REMOVED: uparrow
     // REMOVED: copyright
+    // Removed: ð = eth, Ð = ETH
 };
 
 
