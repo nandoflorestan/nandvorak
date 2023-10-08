@@ -183,43 +183,77 @@ xkb_symbols "olpc" {
 
 // plenopets: Brazilian Dvorak multilingual
     // Supports Portuguese, Polish, Esperanto, Spanish and English.
-    // 2023-10-06 - Nando Florestan  nandoflorestan+dvorak@gmail.com
+    // 2023-10-08 - Nando Florestan  nandoflorestan+dvorak@gmail.com
     partial alphanumeric_keys
     xkb_symbols "plenopets" {
     include "br(dvorak)"
     name[Group1]="Portuguese (Dvorak multilingual)";
 
+    // Most important thing: altgr + c = ccedilla
     //key <AD08> { [ c, C, uparrow, copyright ] };
     key <AD08> { [ c, C, ccedilla, Ccedilla ] };
 
-    // Extra ABNT2 key:
-    //key <AB11> { [ backslash, bar, currency, brokenbar ] };
-    key <AB11> { [ uparrow, copyright, currency, brokenbar ] };
-
+    // Backslash on the same key as slash; pipe on the next key
     //key <AD01> { [ slash, question, degree, questiondown ] };
     key <AD01> { [ slash, question, backslash, questiondown ] };
     //key <AD02> { [ comma, less, 0x01000329, 0x01000313 ] };
     key <AD02> { [ comma, less, bar, degree ] };
 
+    // en dash and em dash are 2 very important glyphs for writing text.
     //key <AD12> { [ equal, plus, section, plusminus ] };
     key <AD12> { [ equal, plus, 0x01002014, plusminus ] }; // em dash: —
     // key <BKSL> { [ minus, underscore, 0x01002015, 0x01000336 ] };
     key <BKSL> { [ minus, underscore, 0x01002013, section ] }; // en dash: –
 
+    // acute is not needed, just press dead_acute twice. Likewise for grave.
+    // Put dead_ogonek in the same key because it's a cedilla that turns right.
+    // dead_ogonek is more accessible here. It's used in Polish: ąĄȩĘ
+    // key <AD11> { [ dead_acute, dead_grave, acute, grave ] };
+    key <AD11> { [ dead_acute, dead_grave, dead_ogonek, dead_cedilla ] };
+
+    // Again, press the dead key twice to obtain the undead glyph.
+    // key <AC11> { [ dead_tilde, dead_circumflex, asciitilde, asciicircum ] };
+    key <AC11> { [ dead_tilde, dead_circumflex, dead_abovedot ] };
+    // ż (z dot above) is used in Polish.
+
+    // Put ubreve on the u key so it's easy to remember.
+    // key <AC04> { [ u, U, oslash, Ooblique ] };
+    key <AC04> { [ u, U, ubreve, Ubreve ] }; // ŭŬ are Esperanto glyphs.
+
+    // ...and then ubreve is not needed where it was before.
+    // key <AB08> { [ w, W, ubreve, Ubreve ] };
+    key <AB08> { [ w, W ] };
+
+    // One of the 2 extra ABNT2 keys:
+    //key <AB11> { [ backslash, bar, currency, brokenbar ] };
+    key <AB11> { [ backslash, bar ] };
+
     //Prolly change:
     // key <AE05> { [            5,         percent,                 cent,       0x01002030 ] };
     // key <AE06> { [            6,  dead_diaeresis,              notsign,        diaeresis ] };
     // key <AE07> { [            7,       ampersand,        dead_belowdot,    dead_abovedot ] };
-    // key <AE08> { [            8,        asterisk,          dead_ogonek,        dead_horn ] };
-    // key <AE09> { [            9,       parenleft,         dead_cedilla,        dead_hook ] };
+
+    // key <AE08> { [ 8, asterisk, dead_ogonek, dead_horn ] };
+    key <AE08> { [ 8, asterisk, dead_horn ] };
+    // key <AE09> { [ 9, parenleft, dead_cedilla, dead_hook ] };
+    key <AE09> { [ 9, parenleft, dead_hook ] };
+
     // key <AE10> { [            0,      parenright,          dead_macron,       dead_breve ] };
     // key <AE11> { [  bracketleft,       braceleft,          ordfeminine,       0x01000326 ] };
     // key <AE12> { [ bracketright,      braceright,            masculine,   dead_abovering ] };
 
-    // REMOVED: 0x01000329
-    // REMOVED: 0x01000313
-    // REMOVED: ̶ = 0x01000336
+    // REMOVED: ¤ = "currency". Not a popular glyph.
+    //      https://en.wikipedia.org/wiki/Currency_sign_(typography)
+    // REMOVED: ¦ = brokenbar.
+    //      https://en.wikipedia.org/wiki/Vertical_bar#Solid_vertical_bar_vs_broken_bar
+    // REMOVED: 0x01000329  // dead: Combining Vertical Line Below
+    // REMOVED: 0x01000313  // dead: Combining Comma Above
+    // REMOVED: ̶ = 0x01000336  // dead: Combining Long Stroke Overlay
     // REMOVED: ― = 0x01002015 (longer than em dash!)
+    // REMOVED: ø = oslash: Latin Small Letter O With Stroke
+    // REMOVED: Ø = Ooblique: Latin Capital Letter O With Stroke
+    // REMOVED: uparrow
+    // REMOVED: copyright
 };
 
 

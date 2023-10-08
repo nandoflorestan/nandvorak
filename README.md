@@ -1,23 +1,26 @@
 # plenopets – driver para teclado Dvorak em língua portuguesa
 
-Este projeto contém o layout de teclado "plenopets", que foca na língua portuguesa mas também suporta polonês, espanhol, inglês e Esperanto.
+Este projeto contém o layout de teclado Dvorak "plenopets", que foca na língua portuguesa mas também suporta espanhol, francês, alemão e Esperanto.
 
 As prioridades do plenopets são:
 
 - Layout Dvorak.
 - Teclas mortas para acentuação como no ABNT2...
-- ...mas sem depender das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados us, pl, es etc. sem perder os glifos \|çÇ
-- Suporte a múltiplas línguas europeias.
-
+- ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos \|çÇ
+- Suporte ao português, evidentemente.
+- Suporte ao alfabeto polonês: ąĄ ęĘ ćĆ łŁ ńŃ óÓ śŚ źŹ żŻ
+- Suporte ao Esperanto: ĉĈ ĝĜ ĥĤ ĵĴ ŝŜ ŭŬ
+- Suporte ao espanhol: ñÑ
+- Suporte ao francês: àÀ, Ââ, æÆ, çÇ, éÉ, èÈ, êÊ, ëË
+- Suporte ao alemão: äÄ öÖ üÜ ßẞ
 
 TODO
-- PL: Mover o dead_ogonek (ąę) que hoje é AltGr+8 para um lugar mais acessível.
-- PL: Ter todos os acentos do polonês. O ż (z dot above) era AltGr+Shift+7, z.
-- EO: Ter todos os acentos do esperanto.
-- ES: Garantir espanhol: https://blog.busuu.com/spanish-accents/
+- uparrow
 - cedilha com dead keys mais fácil, sem perder o ć. Hoje o dead cedilla é AltGr+9. Seria ótimo se fosse ~c
-- Talvez não mudar de lugar -=] em relação ao QWERTY; mas isto é desviar do padrão Dvorak.
-
+- Adir o plenopets à lista (GUI).
+- Enviar ao projeto XKB.
+- Versão Wayland.
+- Versão para Windows 11.
 
 ## Por que usar um leiaute de teclado Dvorak?
 
@@ -54,13 +57,27 @@ Para quaisquer outras ideias, pode
 
 ## Instalação no Linux
 
-O diretório de destino varia conforme a distribuição do Linux. Verifique se os layouts no teu caso estão neste diretório:
+O diretório do XKB varia conforme a distribuição do Linux. Os leiautes brasileiros ficam num arquivo chamado "br". Verifique se os layouts no teu caso estão neste diretório:
 
     ls /usr/share/X11/xkb/symbols/
 
-Copie o arquivo para o diretório /usr/share/X11/xkb/symbols/:
+Renomeie o arquivo "br" existente, à guisa de backup:
 
-    sudo cp xkb/symbols/plenopets /usr/share/X11/xkb/symbols/
+    sudo mv /usr/share/X11/xkb/symbols/br /usr/share/X11/xkb/symbols/br-backup
+
+Substitua-o pelo nosso arquivo "br":
+
+    sudo cp xkb/symbols/br /usr/share/X11/xkb/symbols/
+
+Você pode trocar o layout através do comando setxbmap. Exemplos:
+
+    setxkbmap br plenopets    # novo
+    setxkbmap br dvorak       # versão antiga
+    setxkbmap br abnt2        # qwerty brasileiro
+    setxkbmap epo             # qwerty esperanto
+    setxkbmap us dvorak-intl
+    setxkbmap us dvorak-alt-intl
+    # Você pode descobrir outros layouts via tab completion.
 
 ...e reinicie o computador. O layout estará disponível para você o habilitar nas configurações de teclado do seu desktop environment.
 
