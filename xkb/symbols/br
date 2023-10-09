@@ -242,74 +242,121 @@ partial alphanumeric_keys modifier_keys function_keys keypad_keys alternate_grou
     };
 
     // Numeric row
-    key <TLDE> {[ apostrophe,       quotedbl,     dead_caron, dead_doubleacute, // ˇ˝
-                  slash, question, backslash, questiondown ]};
-    key <AE01> {[          1,         exclam,      onesuperior,     exclamdown ]}; // ¹¡
-    key <AE02> {[          2,             at,      twosuperior,        onehalf ]}; // ²½
-    key <AE03> {[          3,     numbersign,    threesuperior,  threequarters ]}; // ³¾
-    key <AE04> {[          4,         dollar,     foursuperior,     onequarter ]}; // ⁴¼
-
-    // TODO Prolly change:
-    key <AE05> {[          5,        percent,     fivesuperior,     0x01002030 ]}; // ⁵‰
-    key <AE06> {[          6, dead_diaeresis,      sixsuperior,        notsign ]}; // ⁶¬
-    key <AE07> {[          7,      ampersand,    sevensuperior,  dead_belowdot ]}; // ⁷̣
-    key <AE08> {[          8,       asterisk,    eightsuperior,      dead_horn ]}; // ⁸̛
-    key <AE09> {[          9,      parenleft,     ninesuperior,      dead_hook ]}; // ⁹̉
-    key <AE10> {[          0,     parenright,     zerosuperior,     dead_breve ]}; // ⁰˘
-    key <AE11> {[  bracketleft,    braceleft,      ordfeminine,     0x01000326 ]}; // ª̉
-    key <AE12> {[ bracketright,   braceright,        masculine, dead_abovering ]}; // º°
+    key <TLDE> {[ apostrophe,       quotedbl, NoSymbol, NoSymbol,
+                  dead_caron, dead_doubleacute ]}; // ˇ˝
+    key <AE01> {[          1,         exclam, NoSymbol, NoSymbol,
+                 onesuperior,     exclamdown ]}; // ¹¡
+    key <AE02> {[          2,             at, NoSymbol, NoSymbol,
+                 twosuperior,        onehalf ]}; // ²½
+    key <AE03> {[          3,     numbersign, NoSymbol, NoSymbol,
+                 threesuperior,  threequarters ]}; // ³¾
+    key <AE04> {[          4,         dollar, NoSymbol, NoSymbol,
+                 foursuperior,     onequarter ]}; // ⁴¼
+    key <AE05> {[          5,        percent, NoSymbol, NoSymbol,
+                 fivesuperior,     0x01002030 ]}; // ⁵‰
+    key <AE06> {[          6, dead_diaeresis, NoSymbol, NoSymbol,
+                 sixsuperior,        notsign ]}; // ⁶¬
+    key <AE07> {[          7,      ampersand, NoSymbol, NoSymbol,
+                 sevensuperior,  dead_belowdot ]}; // ⁷̣
+    key <AE08> {[          8,       asterisk, NoSymbol, NoSymbol,
+                 eightsuperior,      dead_horn ]}; // ⁸̛
+    key <AE09> {[          9,      parenleft, NoSymbol, NoSymbol,
+                 ninesuperior,      dead_hook ]}; // ⁹̉
+    key <AE10> {[          0,     parenright, NoSymbol, NoSymbol,
+                 zerosuperior,     dead_breve ]}; // ⁰˘
+    key <AE11> {[  bracketleft,    braceleft, NoSymbol, NoSymbol,
+                 ordfeminine,     0x01000326 ]}; // ª̉
+    key <AE12> {[ bracketright,   braceright, NoSymbol, NoSymbol,
+                 masculine, dead_abovering ]}; // º°
 
     // Upper row
     // Backslash on the same key as slash; pipe (bar) on the next key:
-    key <AD01> {[      slash,       question,        backslash,   questiondown ]}; // \¿
-    key <AD02> { [     comma,           less,    lessthanequal, guillemotleft  ]}; // ≤«
-    key <AD03> { [    period,        greater, greaterthanequal, guillemotright ]}; // ≥»
-    key <AD04> {[          p,              P,         Greek_pi,       Greek_PI ]}; // πΠ
-    key <AD05> {[          y,              Y,         sterling,            yen ]}; //  ¥
-    key <AD06> {[          f,          F,  leftdoublequotemark,  leftsinglequotemark ]};
-    key <AD07> {[          g,          G, rightdoublequotemark, rightsinglequotemark ]};
+    key <AD01> {[      slash,       question, NoSymbol, NoSymbol,
+                   backslash,   questiondown ]}; // \¿
+    key <AD02> {[      comma,           less, NoSymbol, NoSymbol,
+               lessthanequal, guillemotleft  ]}; // ≤«
+    key <AD03> {[     period,        greater, NoSymbol, NoSymbol,
+            greaterthanequal, guillemotright ]}; // ≥»
+    key <AD04> {[          p,              P, NoSymbol, NoSymbol,
+                    Greek_pi,       Greek_PI ]}; // πΠ
+    key <AD05> {[          y,              Y, NoSymbol, NoSymbol,
+                    sterling,            yen ]}; //  ¥
+    key <AD06> {[          f,              F, NoSymbol, NoSymbol,
+             leftdoublequotemark,  leftsinglequotemark ]};
+    key <AD07> {[          g,              G, NoSymbol, NoSymbol,
+            rightdoublequotemark, rightsinglequotemark ]};
     // Most important: AltGr+c = ccedilla (no need for ABNT2 hardware)
-    key <AD08> {[          c,              C,         ccedilla,       Ccedilla ]}; // çÇ
-    key <AD09> {[          r,              R,       registered,      trademark ]}; // ®™
-    key <AD10> {[          l,              L,          lstroke,        Lstroke ]}; // łŁ
+    key <AD08> {[          c,              C, NoSymbol, NoSymbol,
+                    ccedilla,       Ccedilla ]}; // çÇ
+    key <AD09> {[          r,              R, NoSymbol, NoSymbol,
+                  registered,      trademark ]}; // ®™
+    key <AD10> {[          l,              L, NoSymbol, NoSymbol,
+                     lstroke,        Lstroke ]}; // łŁ
     // dead_ogonek is used in Polish: ąĄȩĘ. It's a cedilla that turns right.
-    key <AD11> {[ dead_acute,     dead_grave,      dead_ogonek,   dead_cedilla ]}; // ˛¸
-    key <AD12> {[      equal,           plus,    0x01002014, plusminus ]}; // em dash: —
+    key <AD11> {[ dead_acute,     dead_grave, NoSymbol, NoSymbol,
+                 dead_ogonek,   dead_cedilla ]}; // ˛¸
+    key <AD12> {[      equal,           plus, NoSymbol, NoSymbol,
+               0x01002014, plusminus ]}; // em dash: —
 
     // Main row
-    key <AC01> {[          a,              A,               ae,             AE ]}; // æÆ
-    key <AC02> {[          o,              O,               oe,             OE ]}; // œŒ
-    key <AC03> {[          e,              E,         NoSymbol,       EuroSign ]}; //  €
-    key <AC04> {[          u,              U,           ubreve,         Ubreve ]}; // ŭŬ
-    key <AC05> {[          i,              I,              bar,      copyright ]}; // |©
-    key <AC06> {[          d,              D,         NoSymbol,       NoSymbol ]};
-    key <AC07> {[          h,              H,         NoSymbol,      paragraph ]};
-    key <AC08> {[          t,              T,         NoSymbol,       NoSymbol ]};
-    key <AC09> {[          n,              N,              eng,            ENG ]}; // ŋŊ
-    key <AC10> {[          s,              S,           ssharp,           U1E9E]}; // ßẞ
-    key <AC11> {[ dead_tilde, dead_circumflex,   dead_abovedot,     0x01000336
+    key <AC01> {[          a,              A, NoSymbol, NoSymbol,
+                          ae,             AE ]}; // æÆ
+    key <AC02> {[          o,              O, NoSymbol, NoSymbol,
+                          oe,             OE ]}; // œŒ
+    key <AC03> {[          e,              E, NoSymbol, NoSymbol,
+                    NoSymbol,       EuroSign ]}; //  €
+    key <AC04> {[          u,              U, NoSymbol, NoSymbol,
+                      ubreve,         Ubreve ]}; // ŭŬ
+    key <AC05> {[          i,              I, NoSymbol, NoSymbol,
+                         bar,      copyright ]}; // |©
+    key <AC06> {[          d,              D, NoSymbol, NoSymbol,
+                    NoSymbol,       NoSymbol ]};
+    key <AC07> {[          h,              H, NoSymbol, NoSymbol,
+                    NoSymbol,      paragraph ]};
+    key <AC08> {[          t,              T, NoSymbol, NoSymbol,
+                    NoSymbol,       NoSymbol ]};
+    key <AC09> {[          n,              N, NoSymbol, NoSymbol,
+                         eng,            ENG ]}; // ŋŊ
+    key <AC10> {[          s,              S, NoSymbol, NoSymbol,
+                      ssharp,           U1E9E]}; // ßẞ
+    key <AC11> {[ dead_tilde, dead_circumflex, NoSymbol, NoSymbol,
+               dead_abovedot,     0x01000336
         // ż (z dot above) is used in Polish.
         //  ̶ = 0x01000336 = dead: Combining Long Stroke Overlay
         ]};
-    key <BKSL> {[      minus,     underscore,      0x01002013, section ]}; // en dash: –
+    key <BKSL> {[      minus,     underscore, NoSymbol, NoSymbol,
+                  0x01002013, section ]}; // en dash: –
 
     // Lower row. The ccedilla key is only available in ABNT2 and steals space from ShiftL:
-    key <LSGT> {[   ccedilla,       Ccedilla,        backslash,            bar ]}; // \|
-    key <AB01> {[  semicolon,          colon,       0x01000331,     0x0100032D ]}; // ̱ ̭
-    key <AB02> {[          q,              Q,       0x01000259,     0x0100018F ]}; // əƏ
-    key <AB03> {[          j,              J,       0x01000292,     0x010001B7 ]}; // ʒƷ
-    key <AB04> {[          k,              K,         NoSymbol,     0x01002039 ]}; //  ‹
-    key <AB05> {[          x,              X,         NoSymbol,       NoSymbol ]};
-    key <AB06> {[          b,              B,         NoSymbol,     0x0100203A ]};
-    key <AB07> {[          m,              M,         NoSymbol,             mu ]}; //  µ
-    key <AB08> {[          w,              W,           Return, doublelowquotemark ]};
-    key <AB09> {[          v,              V,           Escape, singlelowquotemark ]};
-    key <AB10> {[          z,              Z,       0x0100201F,     0x0100201B ]};
+    key <LSGT> {[   ccedilla,       Ccedilla, NoSymbol, NoSymbol,
+                   backslash,            bar ]}; // \|
+    key <AB01> {[  semicolon,          colon, NoSymbol, NoSymbol,
+                  0x01000331,     0x0100032D ]}; // ̱ ̭
+    key <AB02> {[          q,              Q, NoSymbol, NoSymbol,
+                  0x01000259,     0x0100018F ]}; // əƏ
+    key <AB03> {[          j,              J, NoSymbol, NoSymbol,
+                  0x01000292,     0x010001B7 ]}; // ʒƷ
+    key <AB04> {[          k,              K, NoSymbol, NoSymbol,
+                    NoSymbol,     0x01002039 ]}; //  ‹
+    key <AB05> {[          x,              X, NoSymbol, NoSymbol,
+                    NoSymbol,       NoSymbol ]};
+    key <AB06> {[          b,              B, NoSymbol, NoSymbol,
+                    NoSymbol,     0x0100203A ]};
+    key <AB07> {[          m,              M, NoSymbol, NoSymbol,
+                    NoSymbol,             mu ]}; //  µ
+    key <AB08> {[          w,              W, NoSymbol, NoSymbol,
+                      Return, doublelowquotemark ]};
+    key <AB09> {[          v,              V, NoSymbol, NoSymbol,
+                      Escape, singlelowquotemark ]};
+    key <AB10> {[          z,              Z, NoSymbol, NoSymbol,
+                  0x0100201F,     0x0100201B ]};
     // This key is not available in US or PL keyboards:
-    key <AB11> {[  backslash,            bar,        brokenbar,       NoSymbol ]};
+    key <AB11> {[  backslash,            bar, NoSymbol, NoSymbol,
+                   brokenbar,       NoSymbol ]};
     //       https://en.wikipedia.org/wiki/Vertical_bar#Solid_vertical_bar_vs_broken_bar
 
-    key <SPCE> {[      space,          space,     nobreakspace,   nobreakspace ]};
+    key <SPCE> {[      space,          space, NoSymbol, NoSymbol,
+                nobreakspace,   nobreakspace ]};
 
 
     // REMOVED: ¤ = "currency". Not a popular glyph.

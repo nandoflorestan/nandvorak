@@ -17,7 +17,7 @@ As prioridades do Nandvorak são:
 - Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
 
 TODO
-- Não precisar segurar os Alts.
+- Não precisar segurar Nav.
 - Navegação
 - Til+c = ccedilha
 - Adir o Nandvorak à lista (GUI).
