@@ -16,14 +16,6 @@ As prioridades do Nandvorak são:
 - Rica escolha de glifos extra.
 - Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
 
-TODO
-- Não precisar segurar Nav.
-- Navegação
-- Til+c = ccedilha
-- Adir o Nandvorak à lista (GUI).
-- Enviar ao projeto XKB.
-- Versão Wayland.
-- Versão para Windows 11.
 
 ## Por que usar um leiaute de teclado Dvorak?
 
@@ -71,6 +63,13 @@ Colaboração *open source* é bem-vinda e por isso é que os fontes estão no
 `github <https://github.com/nandoflorestan/teclado-br>`_.
 Para quaisquer outras ideias, pode
 `criar um ticket <https://github.com/nandoflorestan/teclado-br/issues>`_. Contribua!
+
+TODO
+- Navegação: Home, End, PgUp, PgDown
+- Adir o Nandvorak à lista (GUI).
+- Enviar ao projeto XKB.
+- Versão Wayland.
+- Versão para Windows 11.
 
 
 ## Instalação no Linux

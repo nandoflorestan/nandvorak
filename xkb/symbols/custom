@@ -2,6 +2,7 @@
 // Supports Portuguese, Polish, Esperanto, Spanish, French, German and English.
 // 2023-10-09 - Nando Florestan  nandoflorestan+dvorak@gmail.com
 // setxkbmap custom
+
 // Feature envy: us/symbolic,  Δ ƒƑ
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
 // │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣ │ * ̛│ ( ̉ │ ) ˘ │ { ̦ │ } ° ┃Backspace┃
@@ -10,11 +11,12 @@
 // ┃ Tab   ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ ⏎     ┃
 // ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃ Enter ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃ Escape ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
-// ┃ ex-Caps┃ a æ │ o œ │ e   │ u ŭ │ i | │ d   │ h   │ t   │ n ŋ │ s ß │ ~ ˙ │ - – ┃      ┃
+// ┃ Escape ┃     │     │     │     │     │     │  ⇐  │  ⇓  │  ⇑  │  ⇒  │     │     ┃      ┃
+// ┃ (ex-   ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
+// ┃ CapsLk)┃ a æ │ o œ │ e   │ u ŭ │ i | │ d   │ h   │ t   │ n ŋ │ s ß │ ~ ˙ │ - – ┃      ┃
 // ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-// ┃Shift ┃ Ç | │ : ̭ │ Q Ə │ J Ʒ │ K ‹ │ X   │ N N │ ? ¿ │ , · │ ; ´ │ \ ¦ ┃Shift         ┃
-// ┃ ⇧    ┃ ç \ │ ; ̭ │ q ə │ j ʒ │ k   │ x   │ n ⚥ │ ! ¡ │ . … │ : ` │ / | ┃ ⇧            ┃
+// ┃Shift ┃ Ç | │ : ̭ │ Q Ə │ J Ʒ │ K ‹ │ X › │ B   │ M µ │ W „ │ V ‚ │ Z ‛ ┃ Shift        ┃
+// ┃ ⇧    ┃ ç \ │ ; ̭ │ q ə │ j ʒ │ k   │ x   │ b   │ m   │ w   │ v   │ z ‟ ┃ ⇧            ┃
 // ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
 // ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
 // ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
@@ -55,8 +57,7 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
           NoAction(), RedirectKey(key=<DELE>, clearmods=Mod3+Mod5+Shift),
           NoAction(), RedirectKey(key=<DELE>, clearmods=Mod3+Mod5+Shift),
           NoAction(), RedirectKey(key=<DELE>, clearmods=Mod3+Mod5+Shift)
-        ]
-    };
+        ]};
 
     // Numeric row
     key <TLDE> {[ apostrophe,       quotedbl, NoSymbol, NoSymbol,
@@ -186,11 +187,11 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
     key <AB03> {[          j,              J, NoSymbol, NoSymbol,
                   0x01000292,     0x010001B7 ]}; // ʒƷ
     key <AB04> {[          k,              K, NoSymbol, NoSymbol,
-                    NoSymbol,     0x01002039 ]}; //  ‹
+                    NoSymbol, 0x01002039 ]}; // ‹ = Single  Left-Pointing Angle Quotation Mark
     key <AB05> {[          x,              X, NoSymbol, NoSymbol,
-                    NoSymbol,       NoSymbol ]};
+                    NoSymbol, 0x0100203A ]}; // › = Single Right-Pointing Angle Quotation Mark
     key <AB06> {[          b,              B, NoSymbol, NoSymbol,
-                    NoSymbol,     0x0100203A ]};
+                    NoSymbol,       NoSymbol ]};
     key <AB07> {[          m,              M, NoSymbol, NoSymbol,
                     NoSymbol,             mu ]}; //  µ
     key <AB08> {[          w,              W,   Return, NoSymbol,
