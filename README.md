@@ -83,6 +83,7 @@ Colaboração *open source* é bem-vinda e por isso é que os fontes estão no
 Para quaisquer outras ideias, pode
 `criar um ticket <https://github.com/nandoflorestan/nandvorak/issues>`_. Contribua!
 
+Há também um [projeto mais antigo](https://github.com/nandoflorestan/teclado-br) que em 2023 ainda funciona noutros sistemas operacionais.
 
 ## Instalação no Linux
 
@@ -136,8 +137,7 @@ Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho 
 
 - Navegação: Home, End, PgUp, PgDown
 - Adir o Nandvorak à lista (GUI).
-- Enviar ao projeto XKB.
-- Versão Wayland.
+- Upstreams.
 - Versão para Windows 11.
 
 Algumas coisas que poderiam melhorar:
