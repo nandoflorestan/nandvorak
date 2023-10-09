@@ -79,25 +79,34 @@ O diretório do XKB varia conforme a distribuição do Linux. Os leiautes brasil
 
     ls /usr/share/X11/xkb/symbols/
 
-Renomeie o arquivo "br" existente, à guisa de backup:
+Adicione ali o nosso arquivo "custom". A presença de um arquivo "custom" (desenvolvido pelo usuário) é expressamente prevista pelo XKB.
 
-    sudo mv /usr/share/X11/xkb/symbols/br /usr/share/X11/xkb/symbols/br-backup
+    sudo cp xkb/symbols/custom /usr/share/X11/xkb/symbols/
 
-Substitua-o pelo nosso arquivo "br":
-
-    sudo cp xkb/symbols/br /usr/share/X11/xkb/symbols/
+Também pode fazer um link simbólico ao invés de copiar o arquivo.
 
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
-    setxkbmap br nandvorak    # novo
-    setxkbmap br dvorak       # versão antiga
-    setxkbmap br abnt2        # qwerty brasileiro
-    setxkbmap epo             # qwerty esperanto
-    setxkbmap us dvorak-intl
-    setxkbmap us dvorak-alt-intl
+    setxkbmap br dvorak            # versão antiga: BRDK
+    setxkbmap custom               # Nandvorak
+    setxkbmap custom nandvorak     # Nandvorak (o mesmo)
+    setxkbmap custom epo-nandvorak # Nandvorak Esperanto
+    setxkbmap br abnt2             # qwerty brasileiro
+    setxkbmap epo                  # qwerty esperanto
+    setxkbmap us dvorak-intl       # Dvorak sem suporte ao português
+    setxkbmap us dvorak-alt-intl   # Dvorak sem suporte ao português
     # Você pode descobrir outros layouts via tab completion.
 
-...e reinicie o computador. O layout estará disponível para você o habilitar nas configurações de teclado do seu desktop environment.
+O uso dos comandos acima faz o applet "Keyboard" do Linux Mint capotar e sumir da barra.
+
+### Por enquanto só via setxkbmap
+
+Por enquanto, eu só consigo que o teclado funcione se uso o comando acima.
+
+Atualmente, no Linux Mint, se eu carrego o teclado pela tela "Keyboard" (procurando por "custom"), infelizmente ele carrega errado:
+
+- As camadas AltGr não funcionam.
+- A tecla CapsLock, ao invés de funcionar apenas como Escape, funciona como CapsLock simultaneamente.
 
 
 ## Créditos
