@@ -49,9 +49,8 @@ TODO
 ### Para não tirar as mãos do lugar
 
 - Shift direito dispara Escape, a menos que pressionado com AltGr.
-- TODO Caps Lock alterna para um segundo teclado.
-- AltGr + Shift_L disparam Caps Lock.
-- TODO Os dois Shifts pressionados juntos disparam Caps Lock.
+- AltGr + k dispara Caps Lock.
+- TODO A tecla Caps Lock alterna para um segundo teclado.
 
 ### O segundo teclado (via Caps Lock)
 
@@ -117,3 +116,11 @@ Algumas coisas que poderiam melhorar:
     #  Overriding C with acute:
     <dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
     <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
+
+
+## Lições que eu aprendi
+
+- Tecla mapeada para Escape, combinada com AltGr, funciona no terminal, mas não no Sublime Text.
+- Não adianta tentar que o Shift_R dispare Escape porque assim você perde o Shift_R que é muito importante para fazer maiúsculas com todas as letras da mão esquerda.
+- Não adianta tentar fazer ⇐⇑⇒⇓ com AltGr. O Sublime Text não reage, o Vim já tem e o Alt+L já está tomado pelo łŁ do polonês. (o Vim usa HJKL para direções.)
+- Não funciona no Sublime Text Backspace combinado com AltGr.
