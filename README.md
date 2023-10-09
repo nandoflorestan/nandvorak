@@ -17,6 +17,7 @@ As prioridades do Nandvorak são:
 - Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
 
 TODO
+- Não precisar segurar os Alts.
 - Navegação
 - Til+c = ccedilha
 - Adir o Nandvorak à lista (GUI).
@@ -44,13 +45,15 @@ TODO ilustração do teclado numérico
 
 ### Teclas mortas
 
+- Teclas mortas para acentuação, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
+
 TODO
 
 ### Para não tirar as mãos do lugar
 
-- Shift direito dispara Escape, a menos que pressionado com AltGr.
-- AltGr + k dispara Caps Lock.
-- TODO A tecla Caps Lock alterna para um segundo teclado.
+- Escape e CapsLock trocam de lugar, pois Esc é muito mais utilizada.
+- As duas teclas Alt, usadas com o polegar, selecionam camadas. Somadas ao Shift, dão acesso a 8 camadas no total.
+- BackSpace + Shift disparam Delete.
 
 ### O segundo teclado (via Caps Lock)
 
