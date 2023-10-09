@@ -56,19 +56,13 @@ TODO ilustração do teclado numérico, que tem setas e símbolos matemáticos
 
 ### Teclas mortas
 
-- Teclas mortas para acentuação, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
-
-TODO
+Teclas mortas para acentuação, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
 
 ### Para não tirar as mãos do lugar
 
-- Escape e CapsLock trocam de lugar, pois Esc é muito mais utilizada.
+- Escape e CapsLock foram trocadas de lugar, refletindo a frequência de seu uso.
 - As duas teclas Alt, usadas com o polegar, selecionam camadas. Somadas ao Shift, dão acesso a 8 camadas no total.
 - BackSpace + Shift disparam Delete.
-
-### O segundo teclado (via Caps Lock)
-
-TODO ilustração
 
 
 ## Status do projeto
@@ -78,10 +72,8 @@ TODO ilustração
 
 Mas e os **outros sistemas operacionais**?
 
-Colaboração *open source* é bem-vinda e por isso é que os fontes estão no
-`github <https://github.com/nandoflorestan/nandvorak>`_.
-Para quaisquer outras ideias, pode
-`criar um ticket <https://github.com/nandoflorestan/nandvorak/issues>`_. Contribua!
+Colaboração *open source* é bem-vinda e por isso é que os fontes estão no [github](https://github.com/nandoflorestan/nandvorak).
+Para quaisquer outras ideias, pode [criar um ticket](https://github.com/nandoflorestan/nandvorak/issues). Contribua!
 
 Há também um [projeto mais antigo](https://github.com/nandoflorestan/teclado-br) que em 2023 ainda funciona noutros sistemas operacionais.
 
