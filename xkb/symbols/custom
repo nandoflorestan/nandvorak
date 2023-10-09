@@ -128,14 +128,46 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                          bar,      copyright ]}; // |©
     key <AC06> {[          d,              D, NoSymbol, NoSymbol,
                     NoSymbol,       NoSymbol ]};
-    key <AC07> {[          h,              H, NoSymbol, NoSymbol,
-                    NoSymbol,      paragraph ]};
-    key <AC08> {[          t,              T, NoSymbol, NoSymbol,
-                    NoSymbol,       NoSymbol ]};
-    key <AC09> {[          n,              N, NoSymbol, NoSymbol,
-                         eng,            ENG ]}; // ŋŊ
-    key <AC10> {[          s,              S, NoSymbol, NoSymbol,
-                      ssharp,           U1E9E]}; // ßẞ
+    key <AC07> { // [J] ⇒ [H]
+        symbols[Group1] = [h, H, h, h, NoSymbol, paragraph], // ¶
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<LEFT>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<LEFT>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<LEFT>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<LEFT>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
+    key <AC08> { // [K] ⇒ [T]
+        symbols[Group1] = [t, T, t, t, NoSymbol, NoSymbol],
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<DOWN>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<DOWN>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<DOWN>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<DOWN>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
+    key <AC09> { // [L] ⇒ [N]
+        symbols[Group1] = [n, N, n, n, eng, ENG ], // ŋŊ
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<UP>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<UP>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<UP>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<UP>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
+    key <AC10> { // [;] ⇒ [S]
+        symbols[Group1] = [s, S, s, s, ssharp, U1E9E], // ßẞ
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<RGHT>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<RGHT>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<RGHT>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<RGHT>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
     key <AC11> {[ dead_tilde, dead_circumflex, NoSymbol, NoSymbol,
                dead_abovedot,     0x01000336
         // ż (z dot above) is used in Polish.
@@ -161,10 +193,10 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                     NoSymbol,     0x0100203A ]};
     key <AB07> {[          m,              M, NoSymbol, NoSymbol,
                     NoSymbol,             mu ]}; //  µ
-    key <AB08> {[          w,              W, NoSymbol, NoSymbol,
-                      Return, doublelowquotemark ]};
+    key <AB08> {[          w,              W,   Return, NoSymbol,
+                    NoSymbol, doublelowquotemark ]};
     key <AB09> {[          v,              V, NoSymbol, NoSymbol,
-                      Escape, singlelowquotemark ]};
+                    NoSymbol, singlelowquotemark ]};
     key <AB10> {[          z,              Z, NoSymbol, NoSymbol,
                   0x0100201F,     0x0100201B ]};
     // This key is not available in US or PL keyboards:
