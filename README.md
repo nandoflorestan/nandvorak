@@ -1,6 +1,6 @@
-# Nandvorak – driver para teclado Dvorak em língua portuguesa
+# Nandvorak – layout de teclado Dvorak em língua portuguesa
 
-Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak, foca na língua portuguesa mas também suporta espanhol, francês, alemão e Esperanto.
+Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak, foca na língua portuguesa mas também suporta espanhol, francês, alemão, polonês e Esperanto.
 
 As prioridades do Nandvorak são:
 
@@ -19,12 +19,15 @@ As prioridades do Nandvorak são:
 
 ## Por que usar um leiaute de teclado Dvorak?
 
+Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% de um texto sem tirar a mão dessa linha. As vogais estão na mão esquerda e as consoantes na mão direita; isto aumenta o paralelismo entre as mãos. Estas são só algumas de muitas ideias que concorrem para o Dvorak ser bem mais confortável.
+
 [Leia meu artigo a esse respeito.](http://dev.nando.audio/pages/teclado.html)
 
+![Diagrama de um teclado Dvorak](https://dev.nando.audio/_images/teclado-dvorak-br.png)
 
 ## Como é esse leiaute?
 
-- Baseado no Dvorak.
+- Dvorak com teclas mortas para acentuação, como o ABNT2 – porém compatível com hardware que tenha menos teclas.
 - O cê cedilha (çÇ) é AltGr+c; acento agudo resulta em ćĆ – para o polonês.
 - O teclado numérico oferece setas e glifos matemáticos.
 - O ndash – que serve para separar cláusulas assim – está em AltGr+- e o mdash está em AltGr+=. Este é mais longo e pode ser usado como travessão na escrita de ficção: — Legal!
@@ -76,16 +79,9 @@ TODO ilustração
 Mas e os **outros sistemas operacionais**?
 
 Colaboração *open source* é bem-vinda e por isso é que os fontes estão no
-`github <https://github.com/nandoflorestan/teclado-br>`_.
+`github <https://github.com/nandoflorestan/nandvorak>`_.
 Para quaisquer outras ideias, pode
-`criar um ticket <https://github.com/nandoflorestan/teclado-br/issues>`_. Contribua!
-
-TODO
-- Navegação: Home, End, PgUp, PgDown
-- Adir o Nandvorak à lista (GUI).
-- Enviar ao projeto XKB.
-- Versão Wayland.
-- Versão para Windows 11.
+`criar um ticket <https://github.com/nandoflorestan/nandvorak/issues>`_. Contribua!
 
 
 ## Instalação no Linux
@@ -136,18 +132,27 @@ Os arquivos deste projeto são de domínio público, resultado do trabalho de:
 
 Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho para o domínio público.
 
+**TODO**
+
+- Navegação: Home, End, PgUp, PgDown
+- Adir o Nandvorak à lista (GUI).
+- Enviar ao projeto XKB.
+- Versão Wayland.
+- Versão para Windows 11.
+
 Algumas coisas que poderiam melhorar:
 
 1) Seria ótimo se o cedilha pudesse ser obtido com a tecla morta tilde (til), mas só consegui fazer isso no Windows, não no XKB. Suspeito também que o efeito de ´c depende do locale do sistema: resultará em ć em todos os locales exceto pt_BR devido a uma exceção que hoje existe no arquivo /usr/share/X11/locale/pt_BR.UTF-8/Compose:
 
+```
     #  Overriding C with acute:
     <dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
     <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
-
+```
 
 ## Lições que eu aprendi
 
 - Tecla mapeada para Escape, combinada com AltGr, funciona no terminal, mas não no Sublime Text.
 - Não adianta tentar que o Shift_R dispare Escape porque assim você perde o Shift_R que é muito importante para fazer maiúsculas com todas as letras da mão esquerda.
 - Não adianta tentar fazer ⇐⇑⇒⇓ com AltGr. O Sublime Text não reage, o Vim já tem e o Alt+L já está tomado pelo łŁ do polonês. (o Vim usa HJKL para direções.)
-- Não funciona no Sublime Text Backspace combinado com AltGr.
+- Não funciona no Sublime Text o Backspace combinado com AltGr.
