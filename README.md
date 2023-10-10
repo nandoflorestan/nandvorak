@@ -75,7 +75,11 @@ Mas e os **outros sistemas operacionais**?
 Colaboração *open source* é bem-vinda e por isso é que os fontes estão no [github](https://github.com/nandoflorestan/nandvorak).
 Para quaisquer outras ideias, pode [criar um ticket](https://github.com/nandoflorestan/nandvorak/issues). Contribua!
 
-Há também um [projeto mais antigo](https://github.com/nandoflorestan/teclado-br) que em 2023 ainda funciona noutros sistemas operacionais.
+### Projetos similares
+
+- Um [projeto arquivado](https://github.com/nandoflorestan/teclado-br) em 2023 ainda funciona noutros sistemas operacionais.
+- [Este vídeo](https://www.youtube.com/watch?v=92pRAQeRIak) é a principal influência sobre o Nandvorak.
+
 
 ## Instalação no Linux
 
@@ -128,7 +132,9 @@ Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho 
 **TODO**
 
 - Navegação: Home, End, PgUp, PgDown
-- Adir o Nandvorak à lista (GUI).
+- Implementando algum acorde para CapsLock, liberar a tecla Esc⇒CapsLock para alguma outra função.
+- Toggle layers sem mexer nos Alts, que não são toggle, são hold. https://erikbackman.github.io/notes/sticky-modifiers.html
+- Adir o Nandvorak à lista (GUI) e conseguir que carregue normalmente.
 - Upstreams.
 - Versão para Windows 11.
 
@@ -142,9 +148,8 @@ Algumas coisas que poderiam melhorar:
     <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 ```
 
+
 ## Lições que eu aprendi
 
-- Tecla mapeada para Escape, combinada com AltGr, funciona no terminal, mas não no Sublime Text.
 - Não adianta tentar que o Shift_R dispare Escape porque assim você perde o Shift_R que é muito importante para fazer maiúsculas com todas as letras da mão esquerda.
-- Não adianta tentar fazer ⇐⇑⇒⇓ com AltGr. O Sublime Text não reage, o Vim já tem e o Alt+L já está tomado pelo łŁ do polonês. (o Vim usa HJKL para direções.)
-- Não funciona no Sublime Text o Backspace combinado com AltGr.
+- Redirect(key=<RTRN>, clearmods=all)
