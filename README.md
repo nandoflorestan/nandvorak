@@ -37,8 +37,9 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 // │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
 // │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃ Tab   ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ ⏎     ┃
-// ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃ Enter ┃
+// ┃ Tab   ┃     │     │     │     │     │     │ Home│ PgDn│ PgUp│ End │     │     ┃ ⏎     ┃
+// ┃ ↹     ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
+// ┃       ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃       ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 // ┃ Escape ┃     │     │     │     │     │     │  ⇐  │  ⇓  │  ⇑  │  ⇒  │     │     ┃      ┃
 // ┃ (ex-   ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
@@ -131,8 +132,9 @@ Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho 
 
 **TODO**
 
-- Navegação: Home, End, PgUp, PgDown
+- Nav: BackSpace, Enter, Escape, Delete.
 - Implementando algum acorde para CapsLock, liberar a tecla Esc⇒CapsLock para alguma outra função.
+- Nav: Multimedia keys, starting with volume and brightness.
 - Toggle layers sem mexer nos Alts, que não são toggle, são hold. https://erikbackman.github.io/notes/sticky-modifiers.html
 - Adir o Nandvorak à lista (GUI) e conseguir que carregue normalmente.
 - Upstreams.

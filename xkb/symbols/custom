@@ -8,8 +8,9 @@
 // │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
 // │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃ Tab   ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ ⏎     ┃
-// ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃ Enter ┃
+// ┃ Tab   ┃     │     │     │     │     │     │ Home│ PgDn│ PgUp│ End │     │     ┃ ⏎     ┃
+// ┃ ↹     ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
+// ┃       ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃       ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 // ┃ Escape ┃     │     │     │     │     │     │  ⇐  │  ⇓  │  ⇑  │  ⇒  │     │     ┃      ┃
 // ┃ (ex-   ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
@@ -101,15 +102,48 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                     sterling,            yen ]}; //  ¥
     key <AD06> {[          f,              F, NoSymbol, NoSymbol,
              leftdoublequotemark,  leftsinglequotemark ]};
-    key <AD07> {[          g,              G, NoSymbol, NoSymbol,
-            rightdoublequotemark, rightsinglequotemark ]};
+    key <AD07> { // [U] ⇒ [G]
+        symbols[Group1] = [g, G, g, g,
+            rightdoublequotemark, rightsinglequotemark], // ”’
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<HOME>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<HOME>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<HOME>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<HOME>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
     // Most important: AltGr+c = ccedilla (no need for ABNT2 hardware)
-    key <AD08> {[          c,              C, NoSymbol, NoSymbol,
-                    ccedilla,       Ccedilla ]}; // çÇ
-    key <AD09> {[          r,              R, NoSymbol, NoSymbol,
-                  registered,      trademark ]}; // ®™
-    key <AD10> {[          l,              L, NoSymbol, NoSymbol,
-                     lstroke,        Lstroke ]}; // łŁ
+    key <AD08> { // [I] ⇒ [C]
+        symbols[Group1] = [c, C, c, c, ccedilla, Ccedilla], // çÇ
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<PGDN>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<PGDN>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<PGDN>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<PGDN>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
+    key <AD09> { // [O] ⇒ [R]
+        symbols[Group1] = [r, R, r, r, registered, trademark], // ®™
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<PGUP>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<PGUP>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<PGUP>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<PGUP>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
+    key <AD10> { // [P] ⇒ [L]
+        symbols[Group1] = [l, L, l, l, lstroke, Lstroke], // łŁ
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<END>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<END>, clearmods=Mod3+Mod5),
+            NoAction(), NoAction(),
+            RedirectKey(key=<END>, clearmods=Mod3+Mod5, mods=Control),
+            RedirectKey(key=<END>, clearmods=Mod3+Mod5, mods=Shift+Control)
+        ]};
     // dead_ogonek is used in Polish: ąĄȩĘ. It's a cedilla that turns right.
     key <AD11> {[ dead_acute,     dead_grave, NoSymbol, NoSymbol,
                  dead_ogonek,   dead_cedilla ]}; // ˛¸
