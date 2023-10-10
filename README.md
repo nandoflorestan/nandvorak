@@ -1,20 +1,22 @@
 # Nandvorak – layout de teclado Dvorak em língua portuguesa
 
-Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak, foca na língua portuguesa mas também suporta espanhol, francês, alemão, polonês e Esperanto.
+Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak e suporta estas línguas:
 
-As prioridades do Nandvorak são:
+- Português, com teclas mortas como as do ABNT2.
+- Polonês: ąĄ ęĘ ćĆ łŁ ńŃ óÓ śŚ źŹ żŻ
+- Esperanto: ĉĈ ĝĜ ĥĤ ĵĴ ŝŜ ŭŬ
+- Espanhol: ñÑ
+- Francês: àÀ, Ââ, æÆ, çÇ, éÉ, èÈ, êÊ, ëË
+- Alemão: äÄ öÖ üÜ ßẞ
 
-- Layout Dvorak.
+As outras prioridades do Nandvorak são:
+
+- Layout Dvorak, que traz mais conforto de múltiplas maneiras.
 - Teclas mortas para acentuação como no ABNT2...
 - ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos çÇ\|
-- Suporte ao português, evidentemente.
-- Suporte ao alfabeto polonês: ąĄ ęĘ ćĆ łŁ ńŃ óÓ śŚ źŹ żŻ
-- Suporte ao Esperanto: ĉĈ ĝĜ ĥĤ ĵĴ ŝŜ ŭŬ
-- Suporte ao espanhol: ñÑ
-- Suporte ao francês: àÀ, Ââ, æÆ, çÇ, éÉ, èÈ, êÊ, ëË
-- Suporte ao alemão: äÄ öÖ üÜ ßẞ
 - Rica escolha de glifos extra.
 - Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
+- Uso do polegar: é muito mais ergonômico segurar teclas com o polegar do que com o mindinho.
 
 
 ## Por que usar um leiaute de teclado Dvorak?
@@ -27,42 +29,44 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 
 ## Como é esse leiaute?
 
-- Dvorak com teclas mortas para acentuação, como o ABNT2 – porém compatível com hardware que tenha menos teclas.
-- O cê cedilha (çÇ) é AltGr+c; acento agudo resulta em ćĆ – para o polonês.
-- O teclado numérico oferece setas e glifos matemáticos.
+- Dvorak com teclas mortas para acentuação, como o ABNT2, e além.
+- Teclas mortas para acentuação, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
+- Quem não tem a tecla cê cedilha (çÇ) pode usar AltGr+c. A tecla morta de acento agudo gera ćĆ – para o polonês.
+
+```
+┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
+│ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
+│ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
+┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
+┃ Tab   ┃     │     │     │     │     │     │ Home│ PgDn│ PgUp│ End │     │     ┃ ⏎     ┃
+┃ ↹     ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
+┃       ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃       ┃
+┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
+┃ Escape ┃     │     │     │     │     │     │  ⇐  │  ⇓  │  ⇑  │  ⇒  │     │     ┃      ┃
+┃ (ex-   ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
+┃ CapsLk)┃ a æ │ o œ │ e   │ u ŭ │ i | │ d   │ h   │ t   │ n ŋ │ s ß │ ~ ˙ │ - – ┃      ┃
+┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
+┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K ‹ │ X › │ B   │ M µ │ W „ │ V ‚ │ Z ‛ ┃ Shift        ┃
+┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k   │ x   │ b   │ m   │ w   │ v   │ z ‟ ┃ ⇧            ┃
+┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
+┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
+┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
+┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
+```
+
 - O ndash – que serve para separar cláusulas assim – está em AltGr+- e o mdash está em AltGr+=. Este é mais longo e pode ser usado como travessão na escrita de ficção: — Legal!
+- O teclado numérico oferece setas e glifos matemáticos.
 
-```
-// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
-// │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
-// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃ Tab   ┃     │     │     │     │     │     │ Home│ PgDn│ PgUp│ End │     │     ┃ ⏎     ┃
-// ┃ ↹     ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
-// ┃       ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃       ┃
-// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃ Escape ┃     │     │     │     │     │     │  ⇐  │  ⇓  │  ⇑  │  ⇒  │     │     ┃      ┃
-// ┃ (ex-   ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
-// ┃ CapsLk)┃ a æ │ o œ │ e   │ u ŭ │ i | │ d   │ h   │ t   │ n ŋ │ s ß │ ~ ˙ │ - – ┃      ┃
-// ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-// ┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K ‹ │ X › │ B   │ M µ │ W „ │ V ‚ │ Z ‛ ┃ Shift        ┃
-// ┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k   │ x   │ b   │ m   │ w   │ v   │ z ‟ ┃ ⇧            ┃
-// ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
-// ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
-// ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
-// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
-```
-
-TODO ilustração do teclado numérico, que tem setas e símbolos matemáticos
-
-### Teclas mortas
-
-Teclas mortas para acentuação, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
+TODO ilustração do teclado numérico
 
 ### Para não tirar as mãos do lugar
 
 - Escape e CapsLock foram trocadas de lugar, refletindo a frequência de seu uso.
 - As duas teclas Alt, usadas com o polegar, selecionam camadas. Somadas ao Shift, dão acesso a 8 camadas no total.
+- As 2 camadas de glifos raros são ativadas segurando AltGr com ou sem Shift.
+- O Alt esquerdo foi movido mais para a esquerda (ocupa a tecla Super), para dar espaço a uma nova tecla Nav.
+- Segurar a tecla Nav oferece uma camada de navegação estilo Vim.
+- A ideia das camadas é deixar cada polegar entre Espaço e uma das teclas vizinhas. Recomendamos teclado com tecla Espaço pequena, assim a posição da mão fica mais natural. Quem estiver pronto para gastar pode adquirir um [ErgoDox](https://ergodox-ez.com/) ou similar.
 - BackSpace + Shift disparam Delete.
 
 
@@ -99,7 +103,7 @@ Você pode trocar o layout através do comando setxbmap. Exemplos:
     setxkbmap br dvorak            # versão antiga: BRDK
     setxkbmap custom               # Nandvorak
     setxkbmap custom nandvorak     # Nandvorak (o mesmo)
-    setxkbmap custom epo-nandvorak # Nandvorak Esperanto
+    setxkbmap custom epo-nandvorak # Esperanto; não recomendado; apenas um teste
     setxkbmap br abnt2             # qwerty brasileiro
     setxkbmap epo                  # qwerty esperanto
     setxkbmap us dvorak-intl       # Dvorak sem suporte ao português
@@ -153,5 +157,5 @@ Algumas coisas que poderiam melhorar:
 
 ## Lições que eu aprendi
 
-- Não adianta tentar que o Shift_R dispare Escape porque assim você perde o Shift_R que é muito importante para fazer maiúsculas com todas as letras da mão esquerda.
+- Não adianta tentar que o Shift_R(ight) dispare Escape porque assim você perde o Shift_R que é muito importante para fazer maiúsculas com todas as letras da mão esquerda.
 - Redirect(key=<RTRN>, clearmods=all)
