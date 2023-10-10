@@ -13,10 +13,10 @@ As outras prioridades do Nandvorak são:
 
 - Layout Dvorak, que traz mais conforto de múltiplas maneiras.
 - Teclas mortas para acentuação como no ABNT2...
-- ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos çÇ\|
-- Rica escolha de glifos extra.
+- ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos ç Ç \\ |
 - Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
 - Uso do polegar: é muito mais ergonômico segurar teclas com o polegar do que com o mindinho.
+- Rica escolha de glifos extra.
 
 
 ## Por que usar um leiaute de teclado Dvorak?
@@ -62,11 +62,11 @@ TODO ilustração do teclado numérico
 ### Para não tirar as mãos do lugar
 
 - Escape e CapsLock foram trocadas de lugar, refletindo a frequência de seu uso.
-- As duas teclas Alt, usadas com o polegar, selecionam camadas. Somadas ao Shift, dão acesso a 8 camadas no total.
+- As duas teclas de cada lado da barra de espaço, que devem ser usadas com o polegar, selecionam camadas. Somadas ao Shift, dão acesso a 8 camadas no total.
 - As 2 camadas de glifos raros são ativadas segurando AltGr com ou sem Shift.
-- O Alt esquerdo foi movido mais para a esquerda (ocupa a tecla Super), para dar espaço a uma nova tecla Nav.
-- Segurar a tecla Nav oferece uma camada de navegação estilo Vim.
-- A ideia das camadas é deixar cada polegar entre Espaço e uma das teclas vizinhas. Recomendamos teclado com tecla Espaço pequena, assim a posição da mão fica mais natural. Quem estiver pronto para gastar pode adquirir um [ErgoDox](https://ergodox-ez.com/) ou similar.
+- O Alt esquerdo foi movido mais para a esquerda (ocupa a tecla Super), para dar espaço a uma nova tecla de camada: Nav.
+- Segurar a tecla Nav oferece uma camada de navegação estilo Vim: as 4 teclas em que repousam os 4 dedos da mão direita tornam-se setas.
+- A ideia das camadas é deixar cada polegar entre Espaço e uma das teclas vizinhas. Recomendo comprar teclado com tecla Espaço pequena, assim a posição da mão fica mais natural. Quem estiver pronto para gastar pode adquirir um [ErgoDox](https://ergodox-ez.com/) ou similar.
 - BackSpace + Shift disparam Delete.
 
 
