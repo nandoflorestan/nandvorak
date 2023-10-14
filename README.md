@@ -110,16 +110,26 @@ Você pode trocar o layout através do comando setxbmap. Exemplos:
     setxkbmap us dvorak-alt-intl   # Dvorak sem suporte ao português
     # Você pode descobrir outros layouts via tab completion.
 
-O uso dos comandos acima faz o applet "Keyboard" do Linux Mint capotar e sumir da barra.
+O uso dos comandos acima pode fazer o applet "Keyboard" do Linux Mint (responsável por trocar layouts de teclado) sumir da barra, mas o applet também volta a aparecer quando certos layouts são carregados via setxkbmap.
 
-### Por enquanto só via setxkbmap
+### GUI do Linux Mint
 
-Por enquanto, eu só consigo que o teclado funcione se uso o comando acima.
+No Linux Mint em 2023, se eu carrego o teclado pela tela "Keyboard" (procurando por "custom"), infelizmente ele carrega errado:
 
-Atualmente, no Linux Mint, se eu carrego o teclado pela tela "Keyboard" (procurando por "custom"), infelizmente ele carrega errado:
+1. As camadas AltGr não funcionam.
+2. A tecla CapsLock, ao invés de funcionar apenas como Escape, funciona como CapsLock simultaneamente.
 
-- As camadas AltGr não funcionam.
-- A tecla CapsLock, ao invés de funcionar apenas como Escape, funciona como CapsLock simultaneamente.
+Mas há um conserto. A tela de configuração chamada "Keyboard" possui um botão "Options...". O Nandvorak funciona normalmente se habilitamos as seguintes opções:
+
+- Alt and Win behavior / Alt is swapped with Win
+- Caps Lock behavior / Swap Esc and Caps Lock (resolve o problema 2)
+- Key to choose 5th level / Right Alt chooses 5th level (resolve o problema 1)
+
+O problema é que essas opções não são aplicadas a um layout individual e sim a todos. Quando você alternar para outros layouts de teclado, talvez precise desligar as opções acima.
+
+Recomendo habilitar também, apenas por ser boa ideia:
+
+- Ctrl position / Swap Right Win with Right Ctrl (deixa o Ctrl mais perto e o Win mais longe)
 
 
 ## Créditos
@@ -153,9 +163,3 @@ Algumas coisas que poderiam melhorar:
     <dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
     <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 ```
-
-
-## Lições que eu aprendi
-
-- Não adianta tentar que o Shift_R(ight) dispare Escape porque assim você perde o Shift_R que é muito importante para fazer maiúsculas com todas as letras da mão esquerda.
-- Redirect(key=<RTRN>, clearmods=all)
