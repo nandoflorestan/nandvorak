@@ -96,11 +96,14 @@ Adicione ali o nosso arquivo "custom". A presença de um arquivo "custom" (desen
 
     sudo cp xkb/symbols/custom /usr/share/X11/xkb/symbols/
 
-Também pode fazer um link simbólico ao invés de copiar o arquivo.
+Também pode fazer um link simbólico ao invés de copiar o arquivo:
+
+    sudo ln -s FULL/PATH/TO/xkb/symbols/custom /usr/share/X11/xkb/symbols/
 
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
-    setxkbmap br dvorak            # versão antiga: BRDK
+    setxkbmap br dvorak -option '' # versão antiga: BRDK
+    setxkbmap br dvorak -option caps:swapescape
     setxkbmap custom               # Nandvorak
     setxkbmap custom nandvorak     # Nandvorak (o mesmo)
     setxkbmap custom epo-nandvorak # Esperanto; não recomendado; apenas um teste
@@ -130,6 +133,19 @@ O problema é que essas opções não são aplicadas a um layout individual e si
 Recomendo habilitar também, apenas por ser boa ideia:
 
 - Ctrl position / Swap Right Win with Right Ctrl (deixa o Ctrl mais perto e o Win mais longe)
+
+Depois de carregar o teclado da forma acima, há um comando que lista as opções aplicadas:
+
+    $ setxkbmap -query
+	rules:      evdev
+	model:      pc105
+	layout:     custom
+	options:    caps:swapescape,ctrl:swap_rwin_rctl,compose:paus,compose:sclk,lv5:ralt_switch,altwin:swap_alt_win
+
+
+## Problema no Lubuntu (LXQt)
+
+O Lubuntu recusa-se a fazer a tecla Win funcionar como Alt; o teclado fica sem Alt esquerdo.  Ainda não sei como resolver; quem conseguir por favor me ensine.
 
 
 ## Créditos
