@@ -142,6 +142,8 @@ Depois de carregar o teclado da forma acima, há um comando que lista as opçõe
 	layout:     custom
 	options:    caps:swapescape,ctrl:swap_rwin_rctl,compose:paus,compose:sclk,lv5:ralt_switch,altwin:swap_alt_win
 
+Quando reinicio, às vezes o Alt esquerdo dispara Win ao invés de 5th level. Quando isso acontece, volto à tela Keyboard / Layouts / Options e reaplico "Key to choose 5th level".
+
 
 ## Problema no Lubuntu (LXQt)
 
