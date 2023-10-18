@@ -181,3 +181,6 @@ Algumas coisas que poderiam melhorar:
     <dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
     <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 ```
+
+2) Acho que há hoje um excesso de caracteres especiais no leiaute; ocupam espaço e são pouco usados. É para isso que serve uma tecla Compose. Poderíamos fornecer uma coleção de módulos como [neste projeto](https://github.com/nshepperd/xcompose/blob/master) e muitos outros. O arquivo ~/.XCompose suporta includes.
+
