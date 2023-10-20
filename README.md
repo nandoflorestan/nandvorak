@@ -82,6 +82,7 @@ Para quaisquer outras ideias, pode [criar um ticket](https://github.com/nandoflo
 
 ### Projetos similares
 
+- [Motion Dvorak BR](https://github.com/GabrielCoelho/motiondvorakbr)
 - Um [projeto arquivado](https://github.com/nandoflorestan/teclado-br) em 2023 ainda funciona noutros sistemas operacionais.
 - [Este vídeo](https://www.youtube.com/watch?v=92pRAQeRIak) é a principal influência sobre o Nandvorak.
 
