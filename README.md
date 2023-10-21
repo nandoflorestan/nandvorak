@@ -1,4 +1,4 @@
-# Nandvorak – layout de teclado Dvorak em língua portuguesa
+# Nandvorak – layout de teclado Dvorak multilíngue
 
 Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak e suporta estas línguas:
 
@@ -9,12 +9,12 @@ Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak e supo
 - Francês: àÀ, Ââ, æÆ, çÇ, éÉ, èÈ, êÊ, ëË
 - Alemão: äÄ öÖ üÜ ßẞ
 
-As outras prioridades do Nandvorak são:
+As outras **prioridades do Nandvorak** são:
 
-- Layout Dvorak, que traz mais conforto de múltiplas maneiras.
-- Teclas mortas para acentuação como no ABNT2...
+- **Layout Dvorak**, que traz mais conforto de múltiplas maneiras.
+- Teclas mortas para acentuação no mindinho direito, como no ABNT2...
 - ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos ç Ç \\ |
-- Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape, Page Up, Home, Delete...
+- **Não tirar a mão do lugar.** São dadas alternativas a teclas distantes como Escape, Page Up, Home, Delete...
 - Uso do polegar: é muito mais ergonômico segurar teclas com o polegar do que com o mindinho.
 - Tecla Compose para muitos glifos extra.
 
@@ -26,6 +26,7 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 [Leia meu artigo a esse respeito.](http://dev.nando.audio/pages/teclado.html)
 
 ![Diagrama de um teclado Dvorak](https://dev.nando.audio/_images/teclado-dvorak-br.png)
+
 
 ## Como é esse leiaute?
 
@@ -58,12 +59,14 @@ TODO ilustração do teclado numérico
 
 ### Para não tirar as mãos do lugar
 
+No uso do computador, velocidade, conforto e resistência dependem da economia de movimentos. As seguintes medidas promovem essa economia:
+
 - Escape e CapsLock devem trocar de lugar, refletindo a frequência de seu uso. Isto é opcional. Mais abaixo mostro como fazer isso.
 - As 2 camadas de glifos mais raros são ativadas segurando AltGr com ou sem Shift.
-- Segurar a tecla AltGr oferece uma camada de navegação estilo Vim: as 4 teclas em que repousam os 4 dedos da mão direita tornam-se setas. As 4 teclas abaixo destas contêm teclas de navegação distantes: Home, Page Down, Page Up, End.
-- Todas as pessoas que digitam muito rápido usam a combinação Ctrl+Backspace, que apaga a palavra inteira ao invés de uma letra só. É mais fácil digitar novamente a palavra errada do que editá-la. E o apagamento assim também é mais rápido do que ficar repetindo a tecla Backspace. Mas vi que ambas as teclas dessa combinação são muito distantes e difíceis de alcançar. Então, AltGr + E dispara essa combinação. Eu a chamo de "acorde NO". Ela é muito fácil de usar porque fica diretamente sob o dedo médio da mão esquerda.
-- A tecla Delete também está disponível como AltGr + X (B no QWERTY).
-- BackSpace + Shift disparam Delete.
+- A camada AltGr oferece navegação estilo Vim: as 4 teclas em que repousam os 4 dedos da mão direita tornam-se setas. As 4 teclas abaixo destas equivalem a teclas de navegação distantes: Home, Page Down, Page Up, End.
+- Todas as pessoas que digitam muito rápido usam a combinação Ctrl+Backspace, que apaga a palavra inteira ao invés de uma letra só. Em alta velocidade, é mais fácil digitar novamente a palavra errada do que editá-la, porque redigitar não requer compreensão do erro. E o apagamento assim também é mais rápido do que ficar repetindo a tecla Backspace. Mas vi que ambas as teclas dessa combinação são muito distantes e difíceis de alcançar. Então, AltGr + E dispara essa combinação. Eu a chamo de "acorde NO". Fácil de usar porque fica diretamente sob o dedo médio da mão esquerda.
+- A tecla Delete também está repetida como AltGr + X (B no QWERTY).
+- BackSpace com Shift disparam Delete.
 
 
 ## Status do projeto
@@ -75,12 +78,6 @@ Mas e os **outros sistemas operacionais**?
 
 Colaboração *open source* é bem-vinda e por isso é que os fontes estão no [github](https://github.com/nandoflorestan/nandvorak).
 Para quaisquer outras ideias, pode [criar um ticket](https://github.com/nandoflorestan/nandvorak/issues). Contribua!
-
-### Projetos similares
-
-- [Motion Dvorak BR](https://github.com/GabrielCoelho/motiondvorakbr)
-- Um [projeto arquivado](https://github.com/nandoflorestan/teclado-br) em 2023 ainda funciona noutros sistemas operacionais.
-- [Este vídeo](https://www.youtube.com/watch?v=92pRAQeRIak) é a principal influência sobre o Nandvorak.
 
 
 ## Instalação no Linux
@@ -111,40 +108,6 @@ Você pode trocar o layout através do comando setxbmap. Exemplos:
 
 O uso dos comandos acima pode fazer o applet "Keyboard" do Linux Mint (responsável por trocar layouts de teclado) sumir da barra, mas o applet também volta a aparecer quando certos layouts são carregados via setxkbmap.
 
-### GUI do Linux Mint
-
-No Linux Mint em 2023, se eu carrego o teclado pela tela "Keyboard" (procurando por "custom"), infelizmente ele carrega errado:
-
-1. As camadas AltGr não funcionam.
-2. A tecla CapsLock, ao invés de funcionar apenas como Escape, funciona como CapsLock simultaneamente.
-
-Mas há um conserto. A tela de configuração chamada "Keyboard" possui um botão "Options...". O Nandvorak funciona normalmente se habilitamos as seguintes opções:
-
-- Alt and Win behavior / Alt is swapped with Win
-- Caps Lock behavior / Swap Esc and Caps Lock (resolve o problema 2)
-- Key to choose 5th level / Right Alt chooses 5th level (resolve o problema 1)
-
-O problema é que essas opções não são aplicadas a um layout individual e sim a todos. Quando você alternar para outros layouts de teclado, talvez precise desligar as opções acima.
-
-Recomendo habilitar também, apenas por ser boa ideia:
-
-- Ctrl position / Swap Right Win with Right Ctrl (deixa o Ctrl mais perto e o Win mais longe)
-
-Depois de carregar o teclado da forma acima, há um comando que lista as opções aplicadas:
-
-    $ setxkbmap -query
-	rules:      evdev
-	model:      pc105
-	layout:     custom
-	options:    caps:swapescape,ctrl:swap_rwin_rctl,compose:paus,compose:sclk,lv5:ralt_switch,altwin:swap_alt_win
-
-Quando reinicio, às vezes o Alt esquerdo dispara Win ao invés de 5th level. Quando isso acontece, volto à tela Keyboard / Layouts / Options e reaplico "Key to choose 5th level".
-
-
-## Problema no Lubuntu (LXQt)
-
-O Lubuntu recusa-se a fazer a tecla Win funcionar como Alt; o teclado fica sem Alt esquerdo.  Ainda não sei como resolver; quem conseguir por favor me ensine.
-
 
 ## Créditos
 
@@ -160,11 +123,8 @@ Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho 
 
 **TODO**
 
-- Nav: BackSpace, Enter, Escape, Delete.
+- Na mão esquerda sozinha (para uso com mouse): Enter, cortar, copiar, colar.
 - Implementando algum acorde para CapsLock, liberar a tecla Esc⇒CapsLock para alguma outra função.
-- Nav: Multimedia keys, starting with volume and brightness.
-- Toggle layers sem mexer nos Alts, que não são toggle, são hold. https://erikbackman.github.io/notes/sticky-modifiers.html
-- Adir o Nandvorak à lista (GUI) e conseguir que carregue normalmente.
 - Upstreams.
 - Versão para Windows 11.
 
@@ -180,8 +140,9 @@ Algumas coisas que poderiam melhorar:
 
 2) Acho que há hoje um excesso de caracteres especiais no leiaute; ocupam espaço e são pouco usados. [É para isso que serve uma tecla Compose](https://superuser.com/questions/511472/how-to-compose-key-in-linux). Poderíamos fornecer uma coleção de módulos como [neste projeto](https://github.com/nshepperd/xcompose/blob/master) e muitos outros. O arquivo ~/.XCompose suporta includes.
 
-## Versão de 8 camadas
 
-Eu iniciei, mas não terminei, um leiaute de 8 camadas ao invés de 4. Nessa versão o Alt esquerdo foi movido mais para a esquerda (ocupa a tecla Super), para dar espaço a uma nova tecla de camada: Nav. A ideia das camadas é deixar cada polegar entre Espaço e uma das teclas vizinhas. Recomendo comprar teclado com tecla Espaço pequena, assim a posição da mão fica mais natural.
+### Projetos similares
 
-Infelizmente as 8 camadas se revelaram menos compatíveis com variadas distribuições do Linux. E perderam importância quando descobri como funciona a tecla Compose... esta eu recomendo. Ela permite que se tenham centenas de glifos exóticos ou mesmo frases inteiras. Assim o layout de teclado não precisa focar nesses glifos.
+- [Motion Dvorak BR](https://github.com/GabrielCoelho/motiondvorakbr)
+- Um [projeto arquivado](https://github.com/nandoflorestan/teclado-br) em 2023 ainda funciona noutros sistemas operacionais.
+- [O Nandvorak tem uma versão com uma camada a mais](8-camadas.md), neste repositório mesmo. Mas não é recomendada.
