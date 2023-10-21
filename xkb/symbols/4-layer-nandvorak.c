@@ -9,16 +9,15 @@
 // ┃ Tab   ┃ ? ¿ │ < « │ > » │ P π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
 // ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p € │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D   │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
-// ┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d   │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
+// ┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D › │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
+// ┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d ‹ │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
 // ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-// ┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X › │ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
-// ┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x ‹ │ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
+// ┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X De│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
+// ┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x  l│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 // ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
 // ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
 // ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
-// TODO Del
 // TODO degree °
 // TODO 0x01002022, periodcentered ]}; // •·
 default partial alphanumeric_keys modifier_keys function_keys keypad_keys alternate_group
@@ -109,8 +108,8 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                       ubreve,         Ubreve ]}; // ŭŬ
     key <AC05> {[          i,              I,
                          bar,      copyright ]}; // |©
-    key <AC06> {[          d,              D,
-                    NoSymbol,       NoSymbol ]};
+    key <AC06> {[d, D, 0x01002039, // ‹ = Single  Left-Pointing Angle Quotation Mark
+                    0x0100203A ]}; // › = Single Right-Pointing Angle Quotation Mark
     key <AC07> { // [J] ⇒ [H]
         symbols[Group1] = [h, H],
         actions[Group1] = [
@@ -158,8 +157,12 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
             NoAction(), NoAction(),
             RedirectKey(key=<BKSP>, clearmods=Mod3+Mod5),
             RedirectKey(key=<BKSP>, clearmods=Mod3+Mod5)]};
-    key <AB05> {[x, X, 0x01002039, // ‹ = Single  Left-Pointing Angle Quotation Mark
-                    0x0100203A ]}; // › = Single Right-Pointing Angle Quotation Mark
+    key <AB05> {
+        symbols[Group1] = [x, X, Delete, Delete ],
+        actions[Group1] = [
+            NoAction(), NoAction(),
+            RedirectKey(key=<DELE>, clearmods=Mod3+Mod5),
+            RedirectKey(key=<DELE>, clearmods=Mod3+Mod5)]};
     key <AB06> {[b, B, ssharp, U1E9E]}; // ßẞ
     key <AB07> {
         symbols[Group1] = [ m, M, Home, Home ],
@@ -201,7 +204,7 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
     // REMOVED: 0x01000329  // dead: Combining Vertical Line Below
     // REMOVED: 0x01000313  // dead: Combining Comma Above
     // REMOVED: ̶ = 0x01000336  // dead: Combining Long Stroke Overlay
-    // REMOVED: cent ¢
+    // REMOVED: cent // ¢
 };
 
 

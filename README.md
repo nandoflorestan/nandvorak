@@ -40,11 +40,11 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 ┃ Tab   ┃ ? ¿ │ < « │ > » │ P π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
 ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p € │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
 ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D   │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
-┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d   │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
+┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D › │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
+┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d ‹ │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
 ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X › │ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
-┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x ‹ │ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
+┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X De│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
+┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x  l│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
 ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
 ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
@@ -62,6 +62,7 @@ TODO ilustração do teclado numérico
 - As 2 camadas de glifos mais raros são ativadas segurando AltGr com ou sem Shift.
 - Segurar a tecla AltGr oferece uma camada de navegação estilo Vim: as 4 teclas em que repousam os 4 dedos da mão direita tornam-se setas. As 4 teclas abaixo destas contêm teclas de navegação distantes: Home, Page Down, Page Up, End.
 - Todas as pessoas que digitam muito rápido usam a combinação Ctrl+Backspace, que apaga a palavra inteira ao invés de uma letra só. É mais fácil digitar novamente a palavra errada do que editá-la. E o apagamento assim também é mais rápido do que ficar repetindo a tecla Backspace. Mas vi que ambas as teclas dessa combinação são muito distantes e difíceis de alcançar. Então, AltGr + E dispara essa combinação. Eu a chamo de "acorde NO". Ela é muito fácil de usar porque fica diretamente sob o dedo médio da mão esquerda.
+- A tecla Delete também está disponível como AltGr + X (B no QWERTY).
 - BackSpace + Shift disparam Delete.
 
 
@@ -90,18 +91,17 @@ O diretório do XKB varia conforme a distribuição do Linux. Os leiautes brasil
 
 Adicione ali o nosso arquivo "custom". A presença de um arquivo "custom" (desenvolvido pelo usuário) é expressamente prevista pelo XKB.
 
-    sudo cp xkb/symbols/custom /usr/share/X11/xkb/symbols/
+    sudo cp xkb/symbols/4-layer-nandvorak.c /usr/share/X11/xkb/symbols/custom
 
 Também pode fazer um link simbólico ao invés de copiar o arquivo:
 
-    sudo ln -s FULL/PATH/TO/xkb/symbols/custom /usr/share/X11/xkb/symbols/
+    sudo ln -s FULL/PATH/TO/xkb/symbols/4-layer-nandvorak.c /usr/share/X11/xkb/symbols/custom
 
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
     setxkbmap br dvorak -option ''              # versão antiga: BRDK
-    setxkbmap br dvorak -option caps:swapescape
-    setxkbmap custom -option caps:swapescape    # Nandvorak
-    setxkbmap custom nandvorak                  # Nandvorak (o mesmo)
+    setxkbmap custom -option caps:swapescape    # Nandvorak trocando Caps e Esc
+    setxkbmap custom nandvorak                  # Nandvorak (sem a troca)
     setxkbmap custom epo-nandvorak # Esperanto; não recomendado; apenas um teste
     setxkbmap br abnt2             # qwerty brasileiro
     setxkbmap epo                  # qwerty esperanto
