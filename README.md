@@ -14,9 +14,9 @@ As outras prioridades do Nandvorak são:
 - Layout Dvorak, que traz mais conforto de múltiplas maneiras.
 - Teclas mortas para acentuação como no ABNT2...
 - ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos ç Ç \\ |
-- Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape.
+- Não tirar a mão do lugar: são dadas alternativas a teclas distantes como Escape, Page Up, Home, Delete...
 - Uso do polegar: é muito mais ergonômico segurar teclas com o polegar do que com o mindinho.
-- Rica escolha de glifos extra.
+- Tecla Compose para muitos glifos extra.
 
 
 ## Por que usar um leiaute de teclado Dvorak?
@@ -29,25 +29,22 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 
 ## Como é esse leiaute?
 
-- Dvorak com teclas mortas para acentuação, como o ABNT2, e além.
-- Teclas mortas para acentuação, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
-- Quem não tem a tecla cê cedilha (çÇ) pode usar AltGr+c. A tecla morta de acento agudo gera ćĆ – para o polonês.
+- Dvorak com teclas mortas para acentuação que, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
+- A tecla cê cedilha (çÇ) só existe em teclados ABNT2. Quem não a tem pode usar AltGr + c. Geralmente a tecla morta de acento agudo gera ćĆ – para o polonês.
 
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
 │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
 │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
 ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-┃ Tab   ┃     │     │     │     │     │     │ Home│ PgDn│ PgUp│ End │     │     ┃ ⏎     ┃
-┃ ↹     ┃ ? ¿ │ < « │ > » │ P Π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
-┃       ┃ / \ │ , ≤ │ . ≥ │ p π │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃       ┃
+┃ Tab   ┃ ? ¿ │ < « │ > » │ P π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
+┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p € │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
 ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-┃ Escape ┃     │     │     │     │     │     │  ⇐  │  ⇓  │  ⇑  │  ⇒  │     │     ┃      ┃
-┃ (ex-   ┃ A Æ │ O Œ │ E € │ U Ŭ │ I © │ D   │ H ¶ │ T   │ N Ŋ │ S ẞ │ ^   │ _ § ┃      ┃
-┃ CapsLk)┃ a æ │ o œ │ e   │ u ŭ │ i | │ d   │ h   │ t   │ n ŋ │ s ß │ ~ ˙ │ - – ┃      ┃
+┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D   │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
+┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d   │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
 ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K ‹ │ X › │ B   │ M µ │ W „ │ V ‚ │ Z ‛ ┃ Shift        ┃
-┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k   │ x   │ b   │ m   │ w   │ v   │ z ‟ ┃ ⇧            ┃
+┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X › │ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
+┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x ‹ │ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
 ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
 ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
@@ -61,12 +58,10 @@ TODO ilustração do teclado numérico
 
 ### Para não tirar as mãos do lugar
 
-- Escape e CapsLock foram trocadas de lugar, refletindo a frequência de seu uso.
-- As duas teclas de cada lado da barra de espaço, que devem ser usadas com o polegar, selecionam camadas. Somadas ao Shift, dão acesso a 8 camadas no total.
-- As 2 camadas de glifos raros são ativadas segurando AltGr com ou sem Shift.
-- O Alt esquerdo foi movido mais para a esquerda (ocupa a tecla Super), para dar espaço a uma nova tecla de camada: Nav.
-- Segurar a tecla Nav oferece uma camada de navegação estilo Vim: as 4 teclas em que repousam os 4 dedos da mão direita tornam-se setas.
-- A ideia das camadas é deixar cada polegar entre Espaço e uma das teclas vizinhas. Recomendo comprar teclado com tecla Espaço pequena, assim a posição da mão fica mais natural. Quem estiver pronto para gastar pode adquirir um [ErgoDox](https://ergodox-ez.com/) ou similar.
+- Escape e CapsLock devem trocar de lugar, refletindo a frequência de seu uso. Isto é opcional. Mais abaixo mostro como fazer isso.
+- As 2 camadas de glifos mais raros são ativadas segurando AltGr com ou sem Shift.
+- Segurar a tecla AltGr oferece uma camada de navegação estilo Vim: as 4 teclas em que repousam os 4 dedos da mão direita tornam-se setas. As 4 teclas abaixo destas contêm teclas de navegação distantes: Home, Page Down, Page Up, End.
+- Todas as pessoas que digitam muito rápido usam a combinação Ctrl+Backspace, que apaga a palavra inteira ao invés de uma letra só. É mais fácil digitar novamente a palavra errada do que editá-la. E o apagamento assim também é mais rápido do que ficar repetindo a tecla Backspace. Mas vi que ambas as teclas dessa combinação são muito distantes e difíceis de alcançar. Então, AltGr + E dispara essa combinação. Eu a chamo de "acorde NO". Ela é muito fácil de usar porque fica diretamente sob o dedo médio da mão esquerda.
 - BackSpace + Shift disparam Delete.
 
 
@@ -103,10 +98,10 @@ Também pode fazer um link simbólico ao invés de copiar o arquivo:
 
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
-    setxkbmap br dvorak -option '' # versão antiga: BRDK
+    setxkbmap br dvorak -option ''              # versão antiga: BRDK
     setxkbmap br dvorak -option caps:swapescape
-    setxkbmap custom               # Nandvorak
-    setxkbmap custom nandvorak     # Nandvorak (o mesmo)
+    setxkbmap custom -option caps:swapescape    # Nandvorak
+    setxkbmap custom nandvorak                  # Nandvorak (o mesmo)
     setxkbmap custom epo-nandvorak # Esperanto; não recomendado; apenas um teste
     setxkbmap br abnt2             # qwerty brasileiro
     setxkbmap epo                  # qwerty esperanto
@@ -185,3 +180,8 @@ Algumas coisas que poderiam melhorar:
 
 2) Acho que há hoje um excesso de caracteres especiais no leiaute; ocupam espaço e são pouco usados. [É para isso que serve uma tecla Compose](https://superuser.com/questions/511472/how-to-compose-key-in-linux). Poderíamos fornecer uma coleção de módulos como [neste projeto](https://github.com/nshepperd/xcompose/blob/master) e muitos outros. O arquivo ~/.XCompose suporta includes.
 
+## Versão de 8 camadas
+
+Eu iniciei, mas não terminei, um leiaute de 8 camadas ao invés de 4. Nessa versão o Alt esquerdo foi movido mais para a esquerda (ocupa a tecla Super), para dar espaço a uma nova tecla de camada: Nav. A ideia das camadas é deixar cada polegar entre Espaço e uma das teclas vizinhas. Recomendo comprar teclado com tecla Espaço pequena, assim a posição da mão fica mais natural.
+
+Infelizmente as 8 camadas se revelaram menos compatíveis com variadas distribuições do Linux. E perderam importância quando descobri como funciona a tecla Compose... esta eu recomendo. Ela permite que se tenham centenas de glifos exóticos ou mesmo frases inteiras. Assim o layout de teclado não precisa focar nesses glifos.
