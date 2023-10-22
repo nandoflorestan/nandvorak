@@ -94,12 +94,17 @@ Também pode fazer um link simbólico ao invés de copiar o arquivo:
 
     sudo ln -s FULL/PATH/TO/xkb/symbols/4-layer-nandvorak.c /usr/share/X11/xkb/symbols/custom
 
+Você pode ver a configuração atual do xkb com o comando `setxkbmap -query`
+
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
-    setxkbmap br dvorak -option ''              # versão antiga: BRDK
-    setxkbmap custom -option caps:swapescape    # Nandvorak trocando Caps e Esc
-    setxkbmap custom nandvorak                  # Nandvorak (sem a troca)
+    setxkbmap br dvorak -option ''    # versão antiga (BRDK) apagando as options
+
+    # Nandvorak trocando Caps por Esc e usando Pause como Compose key:
+    setxkbmap custom -option caps:swapescape -option compose:paus
+
     setxkbmap custom epo-nandvorak # Esperanto; não recomendado; apenas um teste
+
     setxkbmap br abnt2             # qwerty brasileiro
     setxkbmap epo                  # qwerty esperanto
     setxkbmap us dvorak-intl       # Dvorak sem suporte ao português
