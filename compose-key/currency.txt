@@ -1,0 +1,15 @@
+# Currencies
+<Multi_key> <L> <equal>              : "₤"   U20a4 # LIRA SIGN
+<Multi_key> <equal> <L>              : "₤"   U20a4 # LIRA SIGN
+
+<Multi_key> <E> <equal>              : "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <E>              : "€"   EuroSign # EURO SIGN
+<Multi_key> <e> <equal>              : "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <e>              : "€"   EuroSign # EURO SIGN
+
+<Multi_key> <bar> <c>                : "¢"   cent # CENT SIGN
+<Multi_key> <c> <bar>                : "¢"   cent # CENT SIGN
+<Multi_key> <L> <minus>              : "£"   sterling # POUND SIGN
+<Multi_key> <minus> <L>              : "£"   sterling # POUND SIGN
+<Multi_key> <Y> <equal>              : "¥"   yen # YEN SIGN
+<Multi_key> <equal> <Y>              : "¥"   yen # YEN SIGN

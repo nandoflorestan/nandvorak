@@ -1,0 +1,56 @@
+<Multi_key> <equal> <slash>	: "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <slash> <equal>	: "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <greater> <equal>	: "≥" 	U2265 # GREATER-THAN OR EQUAL TO
+<Multi_key> <less> <equal>      : "≤" 	U2264 # LESS-THAN OR EQUAL TO
+<Multi_key> <question> <equal>  : "≟" 	U225F # QUESTIONED EQUAL TO
+<Multi_key> <equal> <equal> 	: "≅" 	U2245 # APPROXIMATELY EQUAL TO
+
+<Multi_key> <i> <n>         	: "∈" U2208 # ELEMENT OF
+<Multi_key> <slash> <i> <n> 	: "∉" U2209 # NOT ELEMENT OF
+<Multi_key> <s> <c>             : "⊂"
+<Multi_key> <s> <bracketleft>   : "⊂"
+<Multi_key> <s> <bracketright>  : "⊃"
+<Multi_key> <s> <slash> <c>     : "⊄"
+<Multi_key> <s> <equal> <c>     : "⊆"
+<Multi_key> <s> <slash> <equal> <c> : "⊈"
+
+
+<Multi_key> <h> <h>         	    : "ℎ" U210E # PLANCK'S CONSTANT (h)
+<Multi_key> <h> <minus>     	    : "ℏ" U210F # h-bar
+<Multi_key> <p> <i>                 : "π" U03C0 # small pi
+<Multi_key> <P> <I>                 : "Π" U03A0 # capital pi
+<Multi_key> <p> <d>                 : "∂" U2202 # partial differential
+<Multi_key> <d> <e>                 : "∇" U2207 # nabla ; Del ; gradient operator
+
+<Multi_key> <period> <apostrophe>  <period> 	: "∴" U2234 # THEREFORE
+<Multi_key> <apostrophe> <period> <apostrophe> 	: "∵" U2235 # BECAUSE
+
+<Multi_key> <minus> <greater>   : "→" U2192 # RIGHTWARDS ARROW
+
+<Multi_key> <slash> <backslash> : "λ" U03BB # LAMBDA
+<Multi_key> <minus> <comma>     : "¬" notsign # NOT SIGN
+<Multi_key> <E> <E> 		: "∃" U2203 # EXISTENTIAL QUANTIFIER
+<Multi_key> <A> <A> 		: "∀" U2200 # UNIVERSAL QUANTIFIER
+<Multi_key> <asciicircum> <asciicircum> : "∧" U2227 # LOGICAL AND | CONJUNCTION
+<Multi_key> <v> <v> 	  		: "∨" U2227 # LOGICAL OR | DISJUNCTION
+<Multi_key> <V> <V> 			: "∨" U2227 # LOGICAL OR | DISJUNCTION
+
+<Multi_key> <asciicircum> <minus> : "⁻" U207B # superscript minus
+
+<Multi_key> <8> <8> 	: "∞" U221E # INFINITY
+
+<Multi_key> <O> <plus> : "⊕" U2295 # DIRECT SUM
+<Multi_key> <o> <plus> : "⊕" U2295 # DIRECT SUM
+<Multi_key> <x> <x> 	: "×" U00D7 # MULTIPLICATION
+<Multi_key> <s> <u> 	: "∪" U222A # SET UNION
+<Multi_key> <s> <i> 	: "∩" U2229 # SET INTERSECTION
+<Multi_key> <less> <bracketright> : "◁" # ideal
+
+<Multi_key> <plus> <minus>           : "±"   plusminus # PLUS-MINUS SIGN
+<Multi_key> <p> <m>                  : "±"   plusminus # PLUS-MINUS SIGN
+<Multi_key> <m> <p>                  : "∓"   plusminus # PLUS-MINUS SIGN
+
+<Multi_key> <1> <2>              	: "½"   onehalf # VULGAR FRACTION ONE HALF
+
+<Multi_key> <less> <bracketleft> : "⟨" U27E8 # langle, bra
+<Multi_key> <greater> <bracketright> : "⟩" U27E9 # rangle, ket

@@ -1,0 +1,32 @@
+<Multi_key> <g> <a>	: "α"	# alpha
+<Multi_key> <g> <b>	: "β"	# beta
+
+<Multi_key> <g> <c>	: "γ"	# gamma
+
+<Multi_key> <g> <d>	: "δ"	# delta
+<Multi_key> <g> <e>	: "ε"	# epsilon
+
+<Multi_key> <g> <z>	: "ζ"	# zeta
+<Multi_key> <g> <g>	: "η"	# eta
+
+<Multi_key> <g> <h>	: "θ"	# theta
+<Multi_key> <g> <i>	: "ι"	# iota
+<Multi_key> <g> <k>	: "κ"	# kappa
+<Multi_key> <g> <l>	: "λ"	# lambda
+<Multi_key> <g> <m>	: "µ"	# mu
+<Multi_key> <g> <n>	: "ν"	# nu
+
+<Multi_key> <g> <q>	: "ξ"	# xi
+
+<Multi_key> <g> <o>	: "ο"	# omicron
+<Multi_key> <g> <p>	: "π"	# pi
+<Multi_key> <g> <r>	: "ρ"	# rho
+<Multi_key> <g> <s>	: "σ"	# sigma
+<Multi_key> <g> <t>	: "τ"	# tau
+<Multi_key> <g> <u>	: "υ"	# upsilon
+
+<Multi_key> <g> <f>	: "φ"	# phi
+<Multi_key> <g> <x>	: "χ"	# chi
+<Multi_key> <g> <y>	: "ψ"	# psi
+<Multi_key> <g> <w>	: "ω"	# omega
+

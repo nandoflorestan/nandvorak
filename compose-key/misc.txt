@@ -1,0 +1,38 @@
+<Multi_key> <s> <n> <o> <w>	: "☃" U2603 # Snowman
+<Multi_key> <w> <j> 		:     U2060 # word joiner (non breaking space)
+<Multi_key> <m> <u>             : "µ" mu
+
+# Dashes
+<Multi_key> <minus> <minus> <period>    : "–"   U2013 # EN DASH
+<Multi_key> <minus> <minus> <minus>     : "—"   U2014 # EM DASH
+<Multi_key> <period> <minus>        : "·"   periodcentered # MIDDLE DOT
+<Multi_key> <period> <equal>        : "•"   enfilledcircbullet # BULLET
+
+<Multi_key> <exclam> <exclam>         : "¡"   exclamdown # INVERTED EXCLAMATION MARK
+<Multi_key> <question> <question>     : "¿"   questiondown # INVERTED QUESTION MARK
+<Multi_key> <question> <exclam>         : "‽"   U203D # INTERROBANG
+<Multi_key> <exclam> <question>         : "‽"   U203D # INTERROBANG
+
+<Multi_key> <o> <e>                  : "œ"   oe # LATIN SMALL LIGATURE OE
+<Multi_key> <O> <E>                  : "Œ"   OE # LATIN CAPITAL LIGATURE OE
+<Multi_key> <a> <e>                  : "æ"   ae # LATIN SMALL LETTER AE
+<Multi_key> <A> <E>                  : "Æ"   AE # LATIN CAPITAL LETTER AE
+
+<Multi_key> <asciicircum> <underscore> : "‾" U203E # SPACING OVERLINE (OVERSCORE)
+
+# Long S
+<Multi_key> <f> <s>                  : "ſ"   U017f # LATIN SMALL LETTER LONG S
+<Multi_key> <f> <S>                  : "ſ"   U017f # LATIN SMALL LETTER LONG S
+<Multi_key> <s> <s>                  : "ß"   ssharp # LATIN SMALL LETTER SHARP S
+
+# Musical alterations
+<Multi_key> <numbersign> <b>		: "♭"   U266d # MUSIC FLAT SIGN
+<Multi_key> <numbersign> <f>           	: "♮"   U266e # MUSIC NATURAL SIGN
+<Multi_key> <numbersign> <numbersign>   : "♯"   U266f # MUSIC SHARP SIGN
+
+<Multi_key> <less> <3>                  : "♥"   U2665 # BLACK HEART SUIT
+
+<Multi_key> <c> <s>                  : U2660  # š
+<Multi_key> <c> <c>                  : U2663  # č
+<Multi_key> <c> <d>                  : U2662  # ď
+<Multi_key> <c> <h>                  : U2661  # ȟ

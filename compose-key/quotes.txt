@@ -1,0 +1,9 @@
+# Quotation marks
+<Multi_key> <less> <less>            : "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <greater> <greater>      : "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <less> <apostrophe>      : "‘"   U2018 # LEFT SINGLE QUOTATION MARK
+<Multi_key> <greater> <apostrophe>     : "’"   U2019 # RIGHT SINGLE QUOTATION MARK
+<Multi_key> <less> <quotedbl>        : "“"   U201c # LEFT DOUBLE QUOTATION MARK
+<Multi_key> <greater> <quotedbl>     : "”"   U201d # RIGHT DOUBLE QUOTATION MARK
+<Multi_key> <comma> <quotedbl>       : "„"   U201e # DOUBLE LOW-9 QUOTATION MARK
+<Multi_key> <quotedbl> <comma>       : "„"   U201e # DOUBLE LOW-9 QUOTATION MARK

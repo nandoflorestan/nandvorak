@@ -1,0 +1,10 @@
+# Add to your ~/.XCompose file:
+# include "PATH/TO/nandvorak/compose-key/_all.txt"
+
+include "currency.txt"
+include "greek.txt"
+include "math.txt"
+include "misc.txt"
+include "punctuation.txt"
+include "quotes.txt"
+include "superscripts.txt"

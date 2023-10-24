@@ -1,0 +1,25 @@
+<Multi_key> <o> <c>                  : "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <o> <C>                  : "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <O> <c>                  : "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <O> <C>                  : "©"   copyright # COPYRIGHT SIGN
+
+<Multi_key> <o> <r>                  : "®"   registered # REGISTERED SIGN
+<Multi_key> <o> <R>                  : "®"   registered # REGISTERED SIGN
+<Multi_key> <O> <r>                  : "®"   registered # REGISTERED SIGN
+<Multi_key> <O> <R>                  : "®"   registered # REGISTERED SIGN
+
+<Multi_key> <t> <m>                  : "™"   U2122 # TRADE MARK SIGN
+
+<Multi_key> <period> <greater>      : "›"   U203a # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+<Multi_key> <greater> <period>      : "›"   U203a # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+<Multi_key> <period> <less>         : "‹"   U2039 # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
+<Multi_key> <less> <period>         : "‹"   U2039 # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
+
+<Multi_key> <p> <exclam>            : "¶"   paragraph # PILCROW SIGN
+<Multi_key> <P> <exclam>            : "¶"   paragraph # PILCROW SIGN
+
+<Multi_key> <s> <o>                  : "§"   section # SECTION SIGN
+<Multi_key> <o> <s>                  : "§"   section # SECTION SIGN
+<Multi_key> <o> <o>                  : "°"   degree # DEGREE SIGN
+<Multi_key> <period> <period>       : "…"   ellipsis # HORIZONTAL ELLIPSIS
+
