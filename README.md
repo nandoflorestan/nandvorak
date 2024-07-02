@@ -16,7 +16,7 @@ As outras **prioridades do Nandvorak** são:
 - ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos ç Ç \\ |
 - **Não tirar a mão do lugar.** São dadas alternativas a teclas distantes como Escape, Page Up, Home, Delete...
 - Uso do polegar: é muito mais ergonômico segurar teclas com o polegar do que com o mindinho.
-- Layout apropriado para escritores e programadores.
+- Layout apropriado para escritores, programadores e poliglotas.
 - Tecla Compose para muitos glifos extra.
 
 
@@ -48,8 +48,8 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 ┃Shift ┃ Ç | │ : Ç │ Q Ĥ │ J Ĵ │ K BS│X Del│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
 ┃ ⇧    ┃ ç \ │ ; ç │ q ĥ │ j ĵ │ k BS│x Del│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
-┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
-┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
+┃ Ctrl  ┃ Super ┃ Alt   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
+┃       ┃       ┃       ┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
 ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 ```
 
@@ -58,6 +58,7 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 - Todos os glifos acentuados do Esperanto estão disponíveis com AltGr: ŭĉĝĥĵŝ.
 - O teclado numérico oferece setas e glifos matemáticos:
 
+```
 ┌─────┬─────┬─────┬─────┐
 │ Num │ ∕   │ ⋅   │ −   │
 │ Lck │ / ÷ │ * × │ - − │
@@ -74,6 +75,7 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 │           │ Del │  e  │
 │ 0         │ .   │  r  │
 └───────────┴─────┴─────┘
+```
 
 
 ### Para não tirar as mãos do lugar
