@@ -31,21 +31,21 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 ## Como é esse leiaute?
 
 - Dvorak com teclas mortas para acentuação que, como no ABNT2, ficam no mindinho direito. Mas há muitas outras teclas mortas.
-- A tecla cê cedilha (çÇ) só existe em teclados ABNT2. Quem não a tem pode usar AltGr + c. Geralmente a tecla morta de acento agudo gera ćĆ – para o polonês.
+- A tecla cê cedilha (çÇ) só existe em teclados ABNT2. Quem não a tem pode usar AltGr + ;. Geralmente a tecla morta de acento agudo gera ćĆ – para o polonês.
 
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
 │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
 │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
 ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-┃ Tab   ┃ ? ¿ │ < « │ > » │ P π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
-┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p € │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
+┃ Tab   ┃ ? ¿ │ < « │ > » │ P ‘ │ Y ’ │ F Ŝ │ G Ĝ │ C Ĉ │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
+┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p “ │ y ” │ f ŝ │ g ĝ │ c ĉ │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
 ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 ┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D › │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
 ┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d ‹ │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
 ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X De│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
-┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x  l│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
+┃Shift ┃ Ç | │ : Ç │ Q Ĥ │ J Ĵ │ K BS│X Del│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
+┃ ⇧    ┃ ç \ │ ; ç │ q ĥ │ j ĵ │ k BS│x Del│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
 ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
 ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
@@ -53,9 +53,26 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 ```
 
 - O ndash – que serve para separar cláusulas assim – está em AltGr+- e o mdash está em AltGr+=. Este é mais longo e pode ser usado como travessão na escrita de ficção: — Legal!
-- O teclado numérico oferece setas e glifos matemáticos.
+- Todos os glifos acentuados do Esperanto estão disponíveis com AltGr: ŭĉĝĥĵŝ.
+- O teclado numérico oferece setas e glifos matemáticos:
 
-TODO ilustração do teclado numérico
+┌─────┬─────┬─────┬─────┐
+│ Num │ ∕   │ ⋅   │ −   │
+│ Lck │ / ÷ │ * × │ - − │
+├─────┼─────┼─────┼─────┤
+│   ⇖ │   ⇑ │   ⇗ │     │
+│ 7 ↖ │ 8 ↑ │ 9 ↗ │     │
+├─────┼─────┼─────┤  +  │
+│   ⇐ │   ⇔ │   ⇒ │     │
+│ 4 ← │ 5 ↔ │ 6 → │     │
+├─────┼─────┼─────┼─────┤
+│   ⇙ │   ⇓ │   ⇘ │  E  │
+│ 1 ↙ │ 2 ↓ │ 3 ↘ │  n  │
+├─────┴─────┼─────┤  t  │
+│           │ Del │  e  │
+│ 0         │ .   │  r  │
+└───────────┴─────┴─────┘
+
 
 ### Para não tirar as mãos do lugar
 
@@ -72,7 +89,7 @@ No uso do computador, velocidade, conforto e resistência dependem da economia d
 ## Status do projeto
 
 - [para Linux e assemelhados via XKB](xkb/)
-- Pretendo adicionar versão para Windows 10 em breve.
+- Pretendia adicionar versão para Windows, porém a MS tem sucateado seu sistema operacional a um tal ponto que eu duvido que eu volte a usá-lo – mesmo para as atividades em que ele ainda é superior.
 
 Mas e os **outros sistemas operacionais**?
 
@@ -98,20 +115,19 @@ Você pode ver a configuração atual do xkb com o comando `setxkbmap -query`
 
 Você pode trocar o layout através do comando setxbmap. Exemplos:
 
-    setxkbmap br dvorak -option ''    # versão antiga (BRDK) apagando as options
-
     # Nandvorak trocando Caps por Esc e usando Pause como Compose key:
     setxkbmap custom -option caps:swapescape -option compose:paus
 
     setxkbmap custom epo-nandvorak # Esperanto; não recomendado; apenas um teste
 
+    setxkbmap br dvorak -option '' # versão antiga (BRDK) apagando as options
     setxkbmap br abnt2             # qwerty brasileiro
     setxkbmap epo                  # qwerty esperanto
     setxkbmap us dvorak-intl       # Dvorak sem suporte ao português
     setxkbmap us dvorak-alt-intl   # Dvorak sem suporte ao português
     # Você pode descobrir outros layouts via tab completion.
 
-O uso dos comandos acima pode fazer o applet "Keyboard" do Linux Mint (responsável por trocar layouts de teclado) sumir da barra, mas o applet também volta a aparecer quando certos layouts são carregados via setxkbmap.
+O uso dos comandos acima pode fazer o applet "Keyboard" do Linux Mint (responsável por trocar layouts de teclado) sumir da barra, mas o applet também volta a aparecer quando certos layouts são carregados via setxkbmap. (2023)
 
 
 ## Créditos
@@ -143,11 +159,10 @@ Algumas coisas que poderiam melhorar:
     <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 ```
 
-2) Acho que há hoje um excesso de caracteres especiais no leiaute; ocupam espaço e são pouco usados. [É para isso que serve uma tecla Compose](https://superuser.com/questions/511472/how-to-compose-key-in-linux). Poderíamos fornecer uma coleção de módulos como [neste projeto](https://github.com/nshepperd/xcompose/blob/master) e muitos outros. O arquivo ~/.XCompose suporta includes.
+2) Quem desenvolve um novo leiaute passa muito tempo pensando em caracteres especiais, os quais ocupam espaço e geralmente são pouco usados. [É para isso que serve uma tecla Compose](https://superuser.com/questions/511472/how-to-compose-key-in-linux). Neste projeto também fornecemos uma pequena coleção de módulos como [os deste projeto](https://github.com/nshepperd/xcompose/blob/master). O arquivo ~/.XCompose suporta includes.
 
 
 ### Projetos similares
 
 - [Motion Dvorak BR](https://github.com/GabrielCoelho/motiondvorakbr)
 - Um [projeto arquivado](https://github.com/nandoflorestan/teclado-br) em 2023 ainda funciona noutros sistemas operacionais.
-- [O Nandvorak tem uma versão com uma camada a mais](8-camadas.md), neste repositório mesmo. Mas não é recomendada.

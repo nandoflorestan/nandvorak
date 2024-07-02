@@ -1,19 +1,19 @@
 // Nandvorak: Multilingual Dvorak
 // Supports Portuguese, Polish, Esperanto, Spanish, French, German and English.
-// 2023-10-21 - Nando Florestan  nandoflorestan+dvorak@gmail.com
+// 2024-07-02 - Nando Florestan  nandoflorestan+dvorak@gmail.com
 
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
 // │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
 // │ ' ˇ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ [ ª │ ] º ┃ ⌫       ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃ Tab   ┃ ? ¿ │ < « │ > » │ P π │ Y ¥ │ F ‘ │ G ’ │ C Ç │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
-// ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p € │ y £ │ f “ │ g ” │ c ç │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
+// ┃ Tab   ┃ ? ¿ │ < « │ > » │ P ‘ │ Y ’ │ F Ŝ │ G Ĝ │ C Ĉ │ R ™ │ L Ł │ ` ¸ │ + ± ┃ Enter ┃
+// ┃ ↹     ┃ / \ │ , ≤ │ . ≥ │ p “ │ y ” │ f ŝ │ g ĝ │ c ĉ │ r ® │ l ł │ ´ ˛ │ = — ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 // ┃ Esc or ┃ A Æ │ O Œ │ E NO│ U Ŭ │ I © │ D › │ H ⇐ │ T ⇓ │ N ⇑ │ S ⇒ │ ^   │ _ § ┃      ┃
 // ┃ CapsLk ┃ a æ │ o œ │ e NO│ u ŭ │ i | │ d ‹ │ h ⇐ │ t ⇓ │ n ⇑ │ s ⇒ │ ~ ˙ │ - – ┃      ┃
 // ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
-// ┃Shift ┃ Ç | │ : ̭  │ Q Ə │ J Ʒ │ K BS│ X De│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
-// ┃ ⇧    ┃ ç \ │ ; ̭  │ q ə │ j ʒ │ k BS│ x  l│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
+// ┃Shift ┃ Ç | │ : Ç │ Q Ĥ │ J Ĵ │ K BS│X Del│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
+// ┃ ⇧    ┃ ç \ │ ; ç │ q ĥ │ j ĵ │ k BS│x Del│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 // ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
 // ┃ Ctrl  ┃ Alt   ┃ Nav   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
 // ┃       ┃ ex-Sup┃ ex-Alt┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
@@ -73,16 +73,16 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                lessthanequal, guillemotleft  ]}; // ≤«
     key <AD03> {[     period,        greater,
             greaterthanequal, guillemotright ]}; // ≥»
-    key <AD04> {[ p, P, EuroSign, Greek_pi ]}; // €π
-    key <AD05> {[          y,              Y,
-                    sterling,            yen ]}; //  ¥
-    key <AD06> {[          f,              F,
-         leftdoublequotemark,  leftsinglequotemark ]};
-    key <AD07> { // [U] ⇒ [G]
-        [g, G, rightdoublequotemark, rightsinglequotemark]}; // ”’
-    // Most important: AltGr+c = ccedilla (no need for ABNT2 hardware)
+    // [R] ⇒ [P] “‘
+    key <AD04> {[ p, P, leftdoublequotemark, leftsinglequotemark ]}; 
+    // [T] ⇒ [Y] ”’
+    key <AD05> {[ y, Y, rightdoublequotemark, rightsinglequotemark]};
+    // [Y] ⇒ [F] ŝŜ
+    key <AD06> {[ f, F, scircumflex, Scircumflex ]};
+    // [U] ⇒ [G] ”’
+    key <AD07> {[ g, G, gcircumflex, Gcircumflex ]};
     key <AD08> { // [I] ⇒ [C]
-        [c, C, ccedilla, Ccedilla]}; // çÇ
+        [c, C, ccircumflex, Ccircumflex]}; // ĉĈ
     key <AD09> { // [O] ⇒ [R]
         [r, R, registered, trademark]}; // ®™
     key <AD10> { // [P] ⇒ [L]
@@ -98,8 +98,8 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                           ae,             AE ]}; // æÆ
     key <AC02> {[          o,              O,
                           oe,             OE ]}; // œŒ
-    key <AC03> {
-        symbols[Group1] = [ e, E, BackSpace, BackSpace ], // NO
+    key <AC03> { // The "NO chord" deletes the previous word. It is the same
+        symbols[Group1] = [ e, E, BackSpace, BackSpace ], // as Ctrl+Backspace.
         actions[Group1] = [
             NoAction(), NoAction(),
             RedirectKey(key=<BKSP>, clearmods=Mod3+Mod5, mods=Control),
@@ -142,15 +142,15 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
     key <BKSL> {[      minus,     underscore,
                   0x01002013, section ]}; // en dash: –    section/paragraph: §
 
-    // Lower row. The ccedilla key is only available in ABNT2 and steals space from ShiftL:
+    // Lower row. The ccedilla key only exists in ABNT2 and steals space from ShiftL:
     key <LSGT> {[   ccedilla,       Ccedilla,
                    backslash,            bar ]}; // \|
-    key <AB01> {[  semicolon,          colon,
-                  0x01000331,     0x0100032D ]}; // ̱ ̭
-    key <AB02> {[          q,              Q,
-                  0x01000259,     0x0100018F ]}; // əƏ
-    key <AB03> {[          j,              J,
-                  0x01000292,     0x010001B7 ]}; // ʒƷ
+    // [Z] > [;] çÇ      AltGr+; = ccedilla (no need for ABNT2 hardware)
+    key <AB01> {[  semicolon, colon, ccedilla, Ccedilla ]};
+    // [X] > [Q] ĥĤ
+    key <AB02> {[          q,     Q, hcircumflex, Hcircumflex ]};
+    // [C] > [J] ĵĴ
+    key <AB03> {[          j,     J, jcircumflex, Jcircumflex ]};
     key <AB04> {
         symbols[Group1] = [ k, K, BackSpace, BackSpace ],
         actions[Group1] = [
@@ -201,6 +201,7 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
 
 
     // REMOVED: ¯ = dead_macron
+    // REMOVED: 0x01000331,     0x0100032D ]}; // dead: ̱ ̭
     // REMOVED: 0x01000329  // dead: Combining Vertical Line Below
     // REMOVED: 0x01000313  // dead: Combining Comma Above
     // REMOVED: ̶ = 0x01000336  // dead: Combining Long Stroke Overlay
