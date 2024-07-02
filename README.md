@@ -16,6 +16,7 @@ As outras **prioridades do Nandvorak** são:
 - ...mas sem precisar das 2 teclas adicionais que só existem no ABNT2! Compatibilidade com teclados menores sem perder o acesso aos importantes glifos ç Ç \\ |
 - **Não tirar a mão do lugar.** São dadas alternativas a teclas distantes como Escape, Page Up, Home, Delete...
 - Uso do polegar: é muito mais ergonômico segurar teclas com o polegar do que com o mindinho.
+- Layout apropriado para escritores e programadores.
 - Tecla Compose para muitos glifos extra.
 
 
@@ -52,7 +53,8 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 ```
 
-- O ndash – que serve para separar cláusulas assim – está em AltGr+- e o mdash está em AltGr+=. Este é mais longo e pode ser usado como travessão na escrita de ficção: — Legal!
+- O ndash – que serve para separar cláusulas assim – está em AltGr+-
+- O mdash está em AltGr+=. É mais longo, pode ser usado como travessão na escrita de ficção: — Legal!
 - Todos os glifos acentuados do Esperanto estão disponíveis com AltGr: ŭĉĝĥĵŝ.
 - O teclado numérico oferece setas e glifos matemáticos:
 
@@ -97,7 +99,23 @@ Colaboração *open source* é bem-vinda e por isso é que os fontes estão no [
 Para quaisquer outras ideias, pode [criar um ticket](https://github.com/nandoflorestan/nandvorak/issues). Contribua!
 
 
-## Instalação no Linux
+## Instalação no Linux com Wayland
+
+Os sistemas que rodam sobre Wayland têm documentação fraca sobre teclados em 2024, porém percebo que, via de regra, partem de arquivos de leiaute com o mesmo formato que o velho X, e não só isso, mas frequentemente procuram esses arquivos no tradicional diretório (vide abaixo).
+
+Por exemplo, no Debian, o leiaute funciona com Plasma sobre Wayland, contanto que...
+
+1. você acrescente o arquivo "custom" como descrito abaixo, e
+2. você escolha "custom" na configuração de teclado do Plasma.
+
+O comando ``setxbmap`` não funciona no Wayland:
+
+    WARNING: Running setxkbmap against an XWayland server
+
+...mas o leiaute funciona, ativado por algum outro meio.
+
+
+## Instalação no Linux com servidor X
 
 O diretório do XKB varia conforme a distribuição do Linux. Os leiautes brasileiros ficam num arquivo chamado "br". Verifique se os layouts no teu caso estão neste diretório:
 
@@ -144,7 +162,7 @@ Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho 
 
 **TODO**
 
-- Na mão esquerda sozinha (para uso com mouse): Enter, cortar, copiar, colar.
+- Adir smileys aos arquivos de Compose.
 - Implementando algum acorde para CapsLock, liberar a tecla Esc⇒CapsLock para alguma outra função.
 - Upstreams.
 - Versão para Windows 11.
