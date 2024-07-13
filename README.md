@@ -48,13 +48,15 @@ Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% d
 ┃Shift ┃ Ç | │ : Ç │ Q Ĥ │ J Ĵ │ K BS│X Del│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
 ┃ ⇧    ┃ ç \ │ ; ç │ q ĥ │ j ĵ │ k BS│x Del│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
-┃ Ctrl  ┃ Super ┃ Alt   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
-┃       ┃       ┃       ┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
+┃ Ctrl  ┃ Super ┃ Alt   ┃ _ Underline        ⍽ Nobreakspace ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
+┃       ┃       ┃       ┃ ␣ Space            _ Underline    ┃      ┃      ┃ Menu ┃      ┃
 ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 ```
 
 - O ndash – que serve para separar cláusulas assim – está em AltGr+-
 - O mdash está em AltGr+=. É mais longo, pode ser usado como travessão na escrita de ficção: — Legal!
+- O sublinhado, importante em programação, está não só no lugar de sempre (Shift+-) mas
+  também em Shift+Espaço e em AltGr+Espaço.
 - Todos os glifos acentuados do Esperanto estão disponíveis com AltGr: ŭĉĝĥĵŝ.
 - O teclado numérico oferece setas e glifos matemáticos:
 

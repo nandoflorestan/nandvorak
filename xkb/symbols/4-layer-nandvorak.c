@@ -1,6 +1,6 @@
 // Nandvorak: Multilingual Dvorak
 // Supports Portuguese, Polish, Esperanto, Spanish, French, German and English.
-// 2024-07-02 - Nando Florestan  nandoflorestan+dvorak@gmail.com
+// 2024-07-13 - Nando Florestan  nandoflorestan+dvorak@gmail.com
 
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
 // │ " ˝ │ ! ¡ │ @ ½ │ # ¾ │ $ ¼ │ % ‰ │ ¨ ¬ │ & ̣  │ * ̛  │ ( ̉  │ ) ˘ │ {  ̦ │ } ° ┃Backspace┃
@@ -15,8 +15,8 @@
 // ┃Shift ┃ Ç | │ : Ç │ Q Ĥ │ J Ĵ │ K BS│X Del│ B ẞ │ M Ho│ W Pg│ V Pg│ Z En┃ Shift        ┃
 // ┃ ⇧    ┃ ç \ │ ; ç │ q ĥ │ j ĵ │ k BS│x Del│ b ß │ m me│ w Dn│ v Up│ z  d┃ ⇧            ┃
 // ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
-// ┃ Ctrl  ┃ Super ┃ Alt   ┃ ␣ Space            Nobreakspace ⍽ ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
-// ┃       ┃       ┃       ┃ ␣ Space            Nobreakspace ⍽ ┃      ┃      ┃ Menu ┃      ┃
+// ┃ Ctrl  ┃ Super ┃ Alt   ┃ _ Underline        ⍽ Nobreakspace ┃AltGr ┃Multi ┃ Ctxt ┃ Ctrl ┃
+// ┃       ┃       ┃       ┃ ␣ Space            _ Underline    ┃      ┃      ┃ Menu ┃      ┃
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 // TODO degree °
 // TODO 0x01002022, periodcentered ]}; // •·
@@ -196,8 +196,7 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
                    brokenbar,       NoSymbol ]};
     //       https://en.wikipedia.org/wiki/Vertical_bar#Solid_vertical_bar_vs_broken_bar
 
-    key <SPCE> {[      space,          space,
-                nobreakspace,   nobreakspace ]};
+    key <SPCE> {[ space, underscore, underscore, nobreakspace ]};
 
 
     // REMOVED: ¯ = dead_macron
