@@ -171,14 +171,14 @@ default partial alphanumeric_keys modifier_keys function_keys keypad_keys altern
             RedirectKey(key=<HOME>, clearmods=Mod3+Mod5),
             RedirectKey(key=<HOME>, clearmods=Mod3+Mod5)]};
     key <AB08> {
-        symbols[Group1] = [ w, W, Prior, Prior ],
+        symbols[Group1] = [ w, W, Next, Next ],
         actions[Group1] = [
             NoAction(), NoAction(),
             RedirectKey(key=<PGDN>, clearmods=Mod3+Mod5),
             RedirectKey(key=<PGDN>, clearmods=Mod3+Mod5)]};
         
     key <AB09> {
-        symbols[Group1] = [ v, V, Next, Next ],
+        symbols[Group1] = [ v, V, Prior, Prior ],
         actions[Group1] = [
             NoAction(), NoAction(),
             RedirectKey(key=<PGUP>, clearmods=Mod3+Mod5),
