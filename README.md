@@ -167,14 +167,14 @@ entrada. O Debian inclui um utilitário chamado
     sudo apt install input-remapper
 
 Para resolver este problema, eu abro o Input Remapper, seleciono meu teclado no topo,
-crio um Preset e incluo nele estes itens:
+crio um Preset e incluo nele estes mapeamentos:
 
-- ISO Level3 Shift + h -> KEY_LEFT
-- ISO Level3 Shift + t -> KEY_DOWN
-- ISO Level3 Shift + n -> KEY_UP
-- ISO Level3 Shift + s -> KEY_RIGHT
-- ISO Level3 Shift + e -> KEY_LEFTCTRL+BackSpace
-- ISO Level3 Shift + BackSpace -> KEY_LEFTCTRL+BackSpace
+- ISO Level3 Shift + h → KEY_LEFT
+- ISO Level3 Shift + t → KEY_DOWN
+- ISO Level3 Shift + n → KEY_UP
+- ISO Level3 Shift + s → KEY_RIGHT
+- ISO Level3 Shift + e → KEY_LEFTCTRL+BackSpace
+- ISO Level3 Shift + BackSpace → KEY_LEFTCTRL+BackSpace
 
 Aperto o botão **Apply** e posso testar o resultado.
 
