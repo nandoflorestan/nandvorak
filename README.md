@@ -3,11 +3,11 @@
 Este projeto contém o layout de teclado "Nandvorak", que tem base Dvorak e suporta estas línguas:
 
 - Português, com teclas mortas como as do ABNT2.
-- Polonês: ąĄ ęĘ ćĆ łŁ ńŃ óÓ śŚ źŹ żŻ
-- Esperanto: ĉĈ ĝĜ ĥĤ ĵĴ ŝŜ ŭŬ
 - Espanhol: ñÑ
 - Francês: àÀ, Ââ, æÆ, çÇ, éÉ, èÈ, êÊ, ëË
 - Alemão: äÄ öÖ üÜ ßẞ
+- Polonês: ąĄ ęĘ ćĆ łŁ ńŃ óÓ śŚ źŹ żŻ
+- Esperanto: ĉĈ ĝĜ ĥĤ ĵĴ ŝŜ ŭŬ
 
 As outras **prioridades do Nandvorak** são:
 
@@ -22,7 +22,11 @@ As outras **prioridades do Nandvorak** são:
 
 ## Por que usar um leiaute de teclado Dvorak?
 
-Ele tem as letras mais usadas na *home row*, a linha central. Você digita 70% de um texto sem tirar a mão dessa linha. As vogais estão na mão esquerda e as consoantes na mão direita; isto aumenta o paralelismo entre as mãos. Estas são só algumas de muitas ideias que concorrem para o Dvorak ser bem mais confortável.
+O leiaute Dvorak tem as letras mais usadas na *home row*, a linha central.
+Você digita 70% de um texto sem tirar a mão dessa linha.
+As vogais estão na mão esquerda e as consoantes na mão direita;
+isto aumenta o paralelismo entre as mãos. Estas são só algumas de muitas
+ideias que concorrem para o Dvorak ser bem mais confortável.
 
 [Leia meu artigo a esse respeito.](http://dev.nando.audio/pages/teclado.html)
 
@@ -103,35 +107,85 @@ Colaboração *open source* é bem-vinda e por isso é que os fontes estão no [
 Para quaisquer outras ideias, pode [criar um ticket](https://github.com/nandoflorestan/nandvorak/issues). Contribua!
 
 
-## Instalação no Linux com Wayland
+## Instalação no Linux
 
-Os sistemas que rodam sobre Wayland têm documentação fraca sobre teclados em 2024, porém percebo que, via de regra, partem de arquivos de leiaute com o mesmo formato que o velho X, e não só isso, mas frequentemente procuram esses arquivos no tradicional diretório (vide abaixo).
+A instalação é igual para Wayland e servidor X.
 
-Por exemplo, no Debian, o leiaute funciona com Plasma sobre Wayland, contanto que...
-
-1. você acrescente o arquivo "custom" como descrito abaixo, e
-2. você escolha "custom" na configuração de teclado do Plasma.
-
-O comando ``setxbmap`` não funciona no Wayland:
-
-    WARNING: Running setxkbmap against an XWayland server
-
-...mas o leiaute funciona, ativado por algum outro meio.
-
-
-## Instalação no Linux com servidor X
-
-O diretório do XKB varia conforme a distribuição do Linux. Os leiautes brasileiros ficam num arquivo chamado "br". Verifique se os layouts no teu caso estão neste diretório:
+O diretório do XKB varia conforme a distribuição do Linux.
+Os leiautes brasileiros ficam num arquivo chamado "br".
+Verifique se os layouts no teu caso estão neste diretório:
 
     ls /usr/share/X11/xkb/symbols/
 
-Adicione ali o nosso arquivo "custom". A presença de um arquivo "custom" (desenvolvido pelo usuário) é expressamente prevista pelo XKB.
+Adicione ali o nosso arquivo "custom".
+A presença de um arquivo "custom" (desenvolvido pelo usuário) é
+expressamente prevista pelo XKB.
 
     sudo cp xkb/symbols/4-layer-nandvorak.c /usr/share/X11/xkb/symbols/custom
 
 Também pode fazer um link simbólico ao invés de copiar o arquivo:
 
     sudo ln -s FULL/PATH/TO/xkb/symbols/4-layer-nandvorak.c /usr/share/X11/xkb/symbols/custom
+
+Instalado o arquivo "custom", é necessário escolhê-lo para uso no desktop.
+
+
+## Configuração no Linux com Wayland
+
+Pelo que pude perceber até 2025-07, ao contrário do X, o
+[Wayland](https://en.wikipedia.org/wiki/Wayland_(protocol))
+oferece uma biblioteca chamada
+[libinput](https://wayland.freedesktop.org/libinput/doc/latest/what-is-libinput.html)
+que é reaproveitada pela maioria dos *compositors*.
+Quem interpreta o nosso leiaute de teclado? Não tenho certeza, mas parece ser
+[libxkbcommon](https://github.com/xkbcommon/libxkbcommon/blob/master/doc/compatibility.md).
+
+Por exemplo, no Debian, o leiaute funciona com Plasma sobre Wayland, contanto que...
+
+1. você acrescente o arquivo "custom" como descrito abaixo, e
+2. você escolha "custom" na configuração de teclado do Plasma.
+
+O comando ``setxbmap`` é parte do X e não funciona no Wayland:
+
+    WARNING: Running setxkbmap against an XWayland server
+
+...mas o leiaute funciona, ativado por algum outro meio.
+Por exemplo, no Gnome, acesso o leiaute clicando "Other" e depois
+"A user-defined custom layout".
+
+
+### Solução para recursos faltando no Wayland
+
+No Wayland as combinações de teclas implementadas com RedirectKey() não funcionam.
+Isto inclui as setas na home row da mão direita e o AltGr+E para apagar palavra inteira.
+[Post de 2015 explica.](https://github.com/xkbcommon/libxkbcommon/issues/18#issuecomment-72728366)
+
+Para suprir isto, usuários de Wayland têm usado algum daemon para mapear eventos de
+entrada. O Debian inclui um utilitário chamado
+[Input Remapper](https://github.com/sezanzeb/input-remapper/):
+
+    sudo apt install input-remapper
+
+Para resolver este problema, eu abro o Input Remapper, seleciono meu teclado no topo,
+crio um Preset e incluo nele estes itens:
+
+- ISO Level3 Shift + h -> KEY_LEFT
+- ISO Level3 Shift + t -> KEY_DOWN
+- ISO Level3 Shift + n -> KEY_UP
+- ISO Level3 Shift + s -> KEY_RIGHT
+- ISO Level3 Shift + e -> KEY_LEFTCTRL+BackSpace
+- ISO Level3 Shift + BackSpace -> KEY_LEFTCTRL+BackSpace
+
+Aperto o botão **Apply** e posso testar o resultado.
+
+Outros utilitários similares:
+
+- [Kanata](https://github.com/jtroo/kanata)
+- [KMonad](https://github.com/kmonad/kmonad)
+- [keyd](https://github.com/rvaiya/keyd)
+
+
+## Configuração no Linux com servidor X
 
 Você pode ver a configuração atual do xkb com o comando `setxkbmap -query`
 
@@ -166,6 +220,7 @@ Ao fazer um *pull request* neste projeto, você concorda em doar o seu trabalho 
 
 **TODO**
 
+- Resolver no Wayland: não funciona segurar a tecla Backspace.
 - Adir smileys aos arquivos de Compose.
 - Implementando algum acorde para CapsLock, liberar a tecla Esc⇒CapsLock para alguma outra função.
 - Upstreams.
