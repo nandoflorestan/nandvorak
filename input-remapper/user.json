@@ -1,0 +1,44 @@
+{
+    "mapping": {
+        "1,100,1+1,36,1": [
+            "KEY_LEFT",
+            "keyboard"
+        ],
+        "1,100,1+1,37,1": [
+            "KEY_DOWN",
+            "keyboard"
+        ],
+        "1,100,1+1,38,1": [
+            "KEY_UP",
+            "keyboard"
+        ],
+        "1,100,1+1,39,1": [
+            "KEY_RIGHT",
+            "keyboard"
+        ],
+        "1,42,1+1,100,1+1,50,1": [
+            "Shift_L+KEY_HOME",
+            "keyboard"
+        ],
+        "1,42,1+1,100,1+1,51,1": [
+            "Shift_L+Next",
+            "keyboard"
+        ],
+        "1,42,1+1,100,1+1,52,1": [
+            "Shift_L+Prior",
+            "keyboard"
+        ],
+        "1,42,1+1,100,1+1,53,1": [
+            "Shift_L+KEY_END",
+            "keyboard"
+        ],
+        "1,100,1+1,14,1": [
+            "KEY_LEFTALT+BackSpace",
+            "keyboard"
+        ],
+        "1,100,1+1,32,1": [
+            "KEY_LEFTCTRL+BackSpace",
+            "keyboard"
+        ]
+    }
+}

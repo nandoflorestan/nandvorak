@@ -173,23 +173,30 @@ crio um Preset e incluo nele estes mapeamentos:
 - ISO Level3 Shift + t → KEY_DOWN
 - ISO Level3 Shift + n → KEY_UP
 - ISO Level3 Shift + s → KEY_RIGHT
+- Shift L + ISO Level3 Shift + m → Shift_L + KEY_HOME
+- Shift L + ISO Level3 Shift + w → Shift_L + Next
+- Shift L + ISO Level3 Shift + v → Shift_L + Prior
+- Shift L + ISO Level3 Shift + z → Shift_L + KEY_END
 - ISO Level3 Shift + e → KEY_LEFTCTRL+BackSpace
 - ISO Level3 Shift + BackSpace → KEY_LEFTCTRL+BackSpace
 
 Aperto o botão **Apply** e posso testar o resultado.
 
-Outros utilitários similares:
+[O arquivo resultante (json)](input-remapper/user.json) está incluído neste projeto
+em `input-remapper/`
+
+Outros utilitários similares ao Input Remapper:
 
 - [Kanata](https://github.com/jtroo/kanata)
-- [KMonad](https://github.com/kmonad/kmonad)
 - [keyd](https://github.com/rvaiya/keyd)
+- [KMonad](https://github.com/kmonad/kmonad)
 
 
 ## Configuração no Linux com servidor X
 
 Você pode ver a configuração atual do xkb com o comando `setxkbmap -query`
 
-Você pode trocar o layout através do comando setxbmap. Exemplos:
+Você pode trocar o layout através do comando setxkbmap. Exemplos:
 
     # Nandvorak trocando Caps por Esc e usando Pause como Compose key:
     setxkbmap custom -option caps:swapescape -option compose:paus
